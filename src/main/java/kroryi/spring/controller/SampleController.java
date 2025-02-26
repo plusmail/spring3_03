@@ -1,21 +1,41 @@
 package kroryi.spring.controller;
 
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.MessageSource;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.LocaleResolver;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.time.LocalDateTime;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 @Controller
 @Log4j2
+
 public class SampleController {
+
+    @Value("${server.port}")
+    private String serverPort;
+
+    @Value("${test.price}")
+    private String testPrice;
+
+    private final MessageSource messageSource;
+    private final LocaleResolver localeResolver;
+
+    public SampleController(MessageSource messageSource, LocaleResolver localeResolver) {
+        this.messageSource = messageSource;
+        this.localeResolver = localeResolver;
+    }
 
     @GetMapping("/hello")
     public String hello(Model model) {
@@ -74,10 +94,21 @@ public class SampleController {
 
 
     @GetMapping("/ex/ex3")
-    public String ex3(Model model) {
+    public String ex3(String lang, Model model) {
+        // en_US, ko_KR
+        Locale locale = new Locale(lang);
+        System.out.println("언어 변경: " + locale);
+        messageSource.getMessage("app.title", null, locale);
+
 
         model.addAttribute("arr",
                 new String[]{"호호호호","하하하핳","크크크크크"});
+        // <p>%lt;b&gt;안녕,,, 타임리프 &lt;/b&gt;
+        model.addAttribute("content","안녕,,, 타임리프");
+
+        model.addAttribute("serverPort", serverPort);
+        model.addAttribute("testPrice", testPrice);
+
 
         return "ex3";
     }
@@ -87,8 +118,41 @@ public class SampleController {
 
         model.addAttribute("arr",
                 new String[]{"ㅋㅋㅋㅋㅋ","AAAAAA","BBBBBB"});
+        model.addAttribute("param1", "gogo");
+        model.addAttribute("param2", "zozo");
 
         return "ex4";
+    }
+
+
+    @GetMapping("/basic-objects/ex")
+    public String basicObjects(
+            HttpServletRequest request,
+            HttpServletResponse response,
+            HttpSession session,
+            Model model) {
+        model.addAttribute("contextPath", request.getContextPath());
+        session.setAttribute("sessionData", "세션아 안뇽..");
+        model.addAttribute("request", request);
+        model.addAttribute("response", response);
+        model.addAttribute("session", session);
+
+        model.addAttribute("localDateTime", LocalDateTime.now());
+
+        SampleDTO dto = new SampleDTO();
+        dto.p1 = "호호호호호";
+        dto.p2 = "하하하하하하";
+        dto.p3 = "크크크크크킄";
+        model.addAttribute("dto", dto);
+
+        return "basic-objects";
+    }
+
+    @Component("helloBean")
+    static class HelloBean {
+        public String hello(String name) {
+            return "hello " + name;
+        }
     }
 
 }

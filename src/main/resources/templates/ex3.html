@@ -2,12 +2,23 @@
 <html   xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
         xmlns:th="http://www.thymeleaf.org"
         layout:decorate="~{layout/layout.html}"
-        lang="en">
+        lang="ko">
 
 
 <div layout:fragment="content">
     <h1>여기는 ex3.html 내용 들어 가는 자리</h1>
     <button id="btn1" class="btn btn-primary">클릭하장</button>
+<!--    <p>%lt;b&gt;안녕,,, 타임리프 &lt;/b&gt;-->
+<p th:text="${content}">ddddddddddddddddddddddddd</p>
+
+<p>대한 [[${content}]] 만세</p>
+
+    [[${serverPort}]]<br>
+    [[${testPrice}]]
+
+    <p th:text="#{app.title}"></p>
+    [[#{app.greeting}]]
+
 </div>
 
 <th:block layout:fragment="script">

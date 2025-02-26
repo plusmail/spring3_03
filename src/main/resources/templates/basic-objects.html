@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<ul>
+    <li> response = <span th:text="${#ctx.request.getParameter('name')}"></span></li>
+    <li> response = <span th:text="${#ctx.contextPath}"></span></li>
+    <li> session = <span th:text="${#ctx.session.sessionData}"></span></li>
+    <li> servletContext = <span th:text="${#ctx.contextPath}"></span></li>
+    <li> locale = <span th:text="${#locale}"></span></li>
+
+    <li><span th:text="${localDateTime}"></span></li>
+    <li><span th:text="${#temporals.format(localDateTime, 'yyyy-MM-dd')}"></span></li>
+    <li><span th:text="${#temporals.format(localDateTime, 'yyyy-MM-dd/a')}"></span></li>
+    <li><span th:text="${#temporals.month(localDateTime)}"></span></li>
+    <li><span th:text="${#temporals.monthName(localDateTime)}"></span></li>
+    <li><span th:text="${#temporals.dayOfWeek(localDateTime)}"></span></li>
+
+</ul>
+
+<div th:object="${dto}">
+    <p>p1의값 : <span th:text="*{p1}"></span></p>
+    <p>p1의값 : <span th:text="*{p2}"></span></p>
+    <p>p1의값 : <span th:text="*{p3}"></span></p>
+
+</div>
+
+</body>
+</html>

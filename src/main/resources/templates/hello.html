@@ -13,7 +13,7 @@
 <h4 th:text="${list[1]}"></h4>
 <h4 th:text="${list.get(0)}"></h4>
 <h4 th:text="${list.get(1)}"></h4>
-
+<!--th:with 는 html문서내에서만 사용 가능한 지역변수 선언-->
 <div th:with="num1 = 10, num2=50">
     <h4 th:text="${num1 + num2}"></h4>
 </div>
