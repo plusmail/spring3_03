@@ -6,6 +6,9 @@
 </head>
 <body>
 
+#request #response #session #servletContext는 사용 하지 마세요.
+왜!! 보안이 걸려 있다.
+ModelAttribute를 사용해서 하시오.
 <ul>
     <li> response = <span th:text="${#ctx.request.getParameter('name')}"></span></li>
     <li> response = <span th:text="${#ctx.contextPath}"></span></li>

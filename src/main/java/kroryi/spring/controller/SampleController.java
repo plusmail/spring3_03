@@ -29,14 +29,6 @@ public class SampleController {
     @Value("${test.price}")
     private String testPrice;
 
-    private final MessageSource messageSource;
-    private final LocaleResolver localeResolver;
-
-    public SampleController(MessageSource messageSource, LocaleResolver localeResolver) {
-        this.messageSource = messageSource;
-        this.localeResolver = localeResolver;
-    }
-
     @GetMapping("/hello")
     public String hello(Model model) {
         log.info("hello..............");
@@ -95,10 +87,6 @@ public class SampleController {
 
     @GetMapping("/ex/ex3")
     public String ex3(String lang, Model model) {
-        // en_US, ko_KR
-        Locale locale = new Locale(lang);
-        System.out.println("언어 변경: " + locale);
-        messageSource.getMessage("app.title", null, locale);
 
 
         model.addAttribute("arr",
