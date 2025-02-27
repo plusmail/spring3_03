@@ -11,10 +11,12 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+//@NamedQuery(name="Board.findByTitle",
+//        query="select e from board e where title like concat('%',e.title=:title,'%') ")
 public class Board extends BaseEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false)
     private int bno;
 
     @Column(nullable = false, length = 500)

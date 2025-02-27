@@ -4,6 +4,7 @@ package kroryi.spring.controller;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import lombok.Getter;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.MessageSource;
@@ -20,7 +21,6 @@ import java.util.stream.IntStream;
 
 @Controller
 @Log4j2
-
 public class SampleController {
 
     @Value("${server.port}")
@@ -31,7 +31,7 @@ public class SampleController {
 
     @GetMapping("/hello")
     public String hello(Model model) {
-        log.info("hello..............");
+//        log.info("hello..............");
         model.addAttribute("message", "반가워요.. boot..님");
 
         return "hello";
@@ -48,18 +48,10 @@ public class SampleController {
         return "hello";
     }
 
-    class SampleDTO {
+    @Getter
+    static class SampleDTO {
         private String p1,p2,p3;
 
-        public String getP1() {
-            return p1;
-        }
-        public String getP2() {
-            return p2;
-        }
-        public String getP3() {
-            return p3;
-        }
     }
 
     @GetMapping("/ex/ex2")

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{layout/layout.html}"
+      lang="ko">
+
+
+<div layout:fragment="content">
+    <div>
+        <div>
+            <div>
+                <div>
+                    <h5>검색어 :</h5>
+                    <form action="/board/list" method="get">
+                        <div>
+                            <input type="checkbox" name="types" value="t">제목
+                            <input type="checkbox" name="types" value="w">작성자
+                            <input type="checkbox" name="types" value="c">작성자
+                            <input type="text" name="keyword">
+                        </div>
+                        <div>
+                            <input type="date" name="from">
+                            <input type="date" name="to">
+                        </div>
+                        <div>
+                            <div>
+                                <button type="submit">검색</button>
+                                <button type="reset">취소</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    [[${list.dtoList}]]
+    <br>
+    [[${list.getSize}]]
+
+    <div>
+        <ul class="pagination d-flex justify-content-center">
+
+            <li class="page-item">
+                <a class="page-link" data-num="${resDTO.start -1 }">이전</a>
+            </li>
+
+            <li class="page-item ${resDTO.page == num ? " active
+            " : ""}" >
+            <a href="#" class="page-link" data-num="${num}">${num}</a>
+            </li>
+
+            <li class="page-item">
+                <a class="page-link" data-num="${resDTO.end + 1}">다음</a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<th:block layout:fragment="script">
+    <script>
+        document.querySelector(".pagination").addEventListener("click", (e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            const target = e.target
+            if (target.tagName !== 'A') {
+                return
+            }
+            const num = target.getAttribute("data-num")
+            self.location = `/board/list?page=\${num}`
+
+        }, false)
+    </script>
+</th:block>

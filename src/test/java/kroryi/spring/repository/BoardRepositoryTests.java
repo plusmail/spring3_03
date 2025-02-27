@@ -25,9 +25,9 @@ public class BoardRepositoryTests {
 
     @Test
     public void testInsert() {
-        IntStream.rangeClosed(1,100).forEach(i->{
+        IntStream.rangeClosed(1, 100).forEach(i -> {
             Board board = Board.builder()
-                    .title("title(제목) --"+i)
+                    .title("title(제목) --" + i)
                     .content("content..." + i)
                     .writer("user" + (i % 10))
                     .build();
@@ -71,7 +71,7 @@ public class BoardRepositoryTests {
     }
 
     @Test
-    public void testPaging(){
+    public void testPaging() {
         Pageable pageable = PageRequest.of(1, 5, Sort.by("bno").descending());
 
         Page<Board> result = boardRepository.findAll(pageable);
@@ -86,10 +86,48 @@ public class BoardRepositoryTests {
         boards.forEach(board -> {
             log.info(board.toString());
         });
+    }
 
-
+    @Test
+    public void testFindByTitle() {
+        List<Board> boards = boardRepository.findByTitle("title(제목) --5");
+        boards.forEach(board -> {
+            log.info(board.toString());
+        });
     }
 
 
+    @Test
+    public void testFindByTitleJPQL() {
+        Pageable pageable = PageRequest.of(1, 5, Sort.by("bno").descending());
+
+        Page<Board> boards = boardRepository.findByKeyword("--5", pageable);
+        boards.forEach(board -> {
+            log.info(board.toString());
+        });
+    }
+
+
+    @Test
+    public void testSearch1() {
+        Pageable pageable = PageRequest.of(1, 5, Sort.by("bno").descending());
+        boardRepository.search1(pageable);
+    }
+
+    @Test
+    public void testSearchAll() {
+        String[] types = {"t","w"};
+        String keyword = "2";
+        Pageable pageable = PageRequest.of(1, 5, Sort.by("bno").descending());
+        Page<Board> result = boardRepository.searchAll(types, keyword, pageable);
+        log.info(result.getTotalPages());
+        log.info(result.getSize());
+        log.info(result.getNumber());
+        log.info("{} : {}", result.hasPrevious() , result.hasNext());
+        result.forEach(board -> {
+            log.info(board.toString());
+        });
+
+    }
 
 }
