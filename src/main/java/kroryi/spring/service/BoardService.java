@@ -29,7 +29,7 @@ public class BoardService {
 
         String[] types = pageRequestDTO.getTypes();
         String keyword = pageRequestDTO.getKeyword();
-        Pageable pageable = pageRequestDTO.getPageable();
+        Pageable pageable = pageRequestDTO.getPageable("bno");
 
         Page<Board> result = boardRepository.searchAll(types, keyword, pageable);
 

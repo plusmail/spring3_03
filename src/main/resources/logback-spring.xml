@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- 콘솔 로그 패턴 설정 -->
+<!--    <Property name="LOG_PATTERN" value="%highlight{[%-5p]}{FATAL=bg_red, ERROR=red, INFO=yellow, DEBUG=blue} [%C] %m%n"/>-->
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} %highlight([%thread]) %cyan(%-5level) %logger{36} - %msg%n"/>
+<!--    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"/>-->
+
+    <appender name="ConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/app.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/app-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>7</maxHistory>  <!-- 7일간 로그 유지 -->
+        </rollingPolicy>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+    <appender name="JsonConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+    </appender>
+    <logger name="com.example" level="DEBUG"/>
+
+    <root level="INFO">
+        <appender-ref ref="ConsoleAppender"/>
+        <appender-ref ref="FileAppender"/>
+<!--        <appender-ref ref="JsonConsoleAppender"/>-->
+    </root>
+
+</configuration>

@@ -9,53 +9,83 @@
     <div>
         <div>
             <div>
-                <div>
-                    <h5>검색어 :</h5>
-                    <form action="/board/list" method="get">
-                        <div>
-                            <input type="checkbox" name="types" value="t">제목
-                            <input type="checkbox" name="types" value="w">작성자
-                            <input type="checkbox" name="types" value="c">작성자
-                            <input type="text" name="keyword">
+                <h5>검색어 :</h5>
+                <form th:action="@{/board/list}" method="get">
+                    <!-- 페이지 크기 유지 -->
+                    <input type="hidden" name="size" th:value="${reqDTO.size}">
+
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <select name="type" class="form-select">
+                                <option value="">----</option>
+                                <option value="t" th:selected="${pageRequestDTO.type=='t'}">제목</option>
+                                <option value="c" th:selected="${pageRequestDTO.type=='c'}">내용</option>
+                                <option value="w" th:selected="${pageRequestDTO.type=='w'}">작성자</option>
+                                <option value="tc" th:selected="${pageRequestDTO.type=='tc'}">제목+내용</option>
+                                <option value="tcw" th:selected="${pageRequestDTO.type=='tcw'}">제목+내용+작성자</option>
+                            </select>
                         </div>
-                        <div>
-                            <input type="date" name="from">
-                            <input type="date" name="to">
+                        <input type="text" class="form-control" name="keyword" th:value="${pageRequestDTO.keyword}">
+
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary searchBtn" type="submit">검색</button>
+                            <button class="btn btn-outline-secondary clearBtn" type="button">리셋</button>
                         </div>
-                        <div>
-                            <div>
-                                <button type="submit">검색</button>
-                                <button type="reset">취소</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
-    [[${list.dtoList}]]
-    <br>
-    [[${list.getSize}]]
+
+    <ul class="list-group">
+        <li class="list-group-item active d-flex justify-content-between">
+            <span class="col-1">번호</span>
+            <span class="col-4">제목</span>
+            <span class="col-2">작성자</span>
+            <span class="col-2">작성일</span>
+            <span class="col-2">수정일</span>
+        </li>
+
+        <th:block th:each="dto : ${resDTO.dtoList}">
+            <li class="list-group-item d-flex justify-content-between">
+                <span class="col-1" th:text="${dto.bno}"></span>
+                <span class="col-4">
+                <a th:href="@{/board/read/{bno}(bno=${dto.bno}) + '?' + ${reqDTO.getLink()}}"
+                   th:text="${dto.title}"
+                   class="text-decoration-none"></a>
+            </span>
+                <span class="col-2" th:text="${dto.writer}"></span>
+                <span class="col-2" th:text="${#temporals.format(dto.regDate, 'yyyy.MM.dd')}"></span>
+                <span class="col-2" th:text="${#temporals.format(dto.modDate, 'yyyy.MM.dd')}"></span>
+            </li>
+        </th:block>
+    </ul>
+
 
     <div>
         <ul class="pagination d-flex justify-content-center">
 
-            <li class="page-item">
-                <a class="page-link" data-num="${resDTO.start -1 }">이전</a>
+            <!-- 이전 버튼 -->
+            <li th:if="${resDTO.prev}" class="page-item">
+                <a class="page-link" th:data-num="${resDTO.start - 1}">이전</a>
             </li>
 
-            <li class="page-item ${resDTO.page == num ? " active
-            " : ""}" >
-            <a href="#" class="page-link" data-num="${num}">${num}</a>
+            <!-- 페이지 번호 -->
+            <li th:each="num : ${#numbers.sequence(resDTO.start, resDTO.end)}"
+                th:classappend="${resDTO.page == num} ? 'active'"
+                class="page-item">
+                <a href="#" class="page-link" th:data-num="${num}" th:text="${num}"></a>
             </li>
 
-            <li class="page-item">
-                <a class="page-link" data-num="${resDTO.end + 1}">다음</a>
+            <!-- 다음 버튼 -->
+            <li th:if="${resDTO.next}" class="page-item">
+                <a class="page-link" th:data-num="${resDTO.end + 1}">다음</a>
             </li>
 
         </ul>
     </div>
+
 </div>
 <th:block layout:fragment="script">
     <script>
@@ -67,7 +97,7 @@
                 return
             }
             const num = target.getAttribute("data-num")
-            self.location = `/board/list?page=\${num}`
+            self.location = `/board/list?page=${num}`
 
         }, false)
     </script>

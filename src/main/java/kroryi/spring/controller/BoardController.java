@@ -33,16 +33,18 @@ public class BoardController {
                        BindingResult bindingResult,
                        Model model) {
 
+        log.info("list------------", pageRequestDTO.toString());
         if(bindingResult.hasErrors()) {
             pageRequestDTO = PageRequestDTO.builder().build();
         }
 
         PageResponseDTO<BoardDTO> boardPage = boardService.getBoardsSearch(pageRequestDTO);
 
-        boardPage.getDtoList().forEach(boardDTO -> {
-            log.info(boardDTO);
-        });
-        model.addAttribute("list", boardPage);
+//        boardPage.getDtoList().forEach(boardDTO -> {
+//            log.info(boardDTO);
+//        });
+        model.addAttribute("resDTO", boardPage);
+        model.addAttribute("reqDTO", pageRequestDTO);
 
         return "/board/list";
     }

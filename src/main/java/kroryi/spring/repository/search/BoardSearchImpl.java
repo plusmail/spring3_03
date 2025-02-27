@@ -3,6 +3,7 @@ package kroryi.spring.repository.search;
 import com.querydsl.core.BooleanBuilder;
 import kroryi.spring.entity.Board;
 import kroryi.spring.entity.QBoard;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
@@ -11,6 +12,8 @@ import com.querydsl.jpa.JPQLQuery;
 
 import java.util.List;
 
+
+@Slf4j
 public class BoardSearchImpl
         extends QuerydslRepositorySupport
         implements BoardSearch {
@@ -44,6 +47,9 @@ public class BoardSearchImpl
     public Page<Board> searchAll(String[] types, String keyword, Pageable pageable) {
         QBoard board = QBoard.board;
         JPQLQuery<Board> query = from(board);
+
+        log.info("----------------------{}", types);
+
         if (types != null && types.length > 0 && keyword != null && !keyword.isEmpty()) {
             BooleanBuilder booleanBuilder = new BooleanBuilder();
             for (String type : types) {
@@ -79,6 +85,9 @@ public class BoardSearchImpl
 
         this.getQuerydsl().applyPagination(pageable, query);
         List<Board> list = query.fetch();
+
+        log.info("----------------------{}", list);
+
         Long count = query.fetchCount();
 
         return new PageImpl<>(list, pageable, count);

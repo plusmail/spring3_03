@@ -2,7 +2,10 @@ package kroryi.spring.entity;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 
 @Entity
@@ -16,6 +19,7 @@ import lombok.*;
 public class Board extends BaseEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
     private int bno;
 
@@ -31,4 +35,8 @@ public class Board extends BaseEntity {
         this.content = content;
     }
 
+    @PostLoad
+    public void postLoad() {
+
+    }
 }

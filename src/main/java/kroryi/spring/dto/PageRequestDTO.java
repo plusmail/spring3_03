@@ -37,22 +37,30 @@ public class PageRequestDTO {
     @Min(value = 5)
     @Max(value = 100)
     @Positive
-    private int size = 5;
+    private int size = 10;
 
     @Builder.Default
     @Min(value = 2)
     @Max(value = 20)
     @Positive
-    private int pageListSize = 2;
+    private int pageListSize = 10;
 
     private String link;
 
-    private String[] types;
+    private String type;
     private String keyword;
     private boolean finished;
     private LocalDate from ;
     private LocalDate to ;
 
+    public String[] getTypes(){
+        if(type== null || type.isEmpty()){
+            return null;
+        }
+        // "tw,t,twc"
+        // split(",")
+        return type.split("");
+    }
 
     public int getSkip() {
         return (page - 1) * size;
@@ -72,29 +80,33 @@ public class PageRequestDTO {
 //        return link;
 //    }
 
-    public String getLink() {
-        StringBuilder buffer = new StringBuilder();
-        buffer.append("page=").append(this.page);
-        buffer.append("&size=").append(this.size);
-
-        if(types != null && types.length > 0) {
-            for(String type : types) {
-                buffer.append("&types=").append(type);
+    public String getLink(){
+        // 페이지 번호에 링크를 걸기 위한 것
+        // ?page=${page}&size=10&type=tw
+        if(link == null){
+            StringBuilder builder = new StringBuilder();
+            builder.append("page=" + this.page);
+            builder.append("&size=" + this.size);
+            if(type != null && type.length() > 0){
+                builder.append("&type=" + type);
             }
-        }
-        if(keyword != null && !keyword.isEmpty()) {
-            try {
-                buffer.append("&keyword=").append(URLEncoder.encode(keyword, "UTF-8"));
-            } catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
+            if(keyword != null){
+                try{
+                    // ?page=1&size=10&keyword=세종대왕
+                    // 세종대왕 한글 깨지말라고 인코딩함.
+                    builder.append("&keyword="+ URLEncoder.encode(keyword, "UTF-8"));
+                }catch (UnsupportedEncodingException e){
+                    e.printStackTrace();
+                }
             }
-        }
-        return buffer.toString();
+            link = builder.toString();
 
+        }
+        return link;
     }
 
     public Pageable getPageable(String... props) {
-        return PageRequest.of(1, 5, Sort.by("bno").descending());
+        return PageRequest.of(this.page - 1, this.size, Sort.by(props).descending());
 
     }
 
