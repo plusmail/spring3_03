@@ -19,7 +19,7 @@ public class PageResponseDTO<E> {
 
     private List<E> dtoList;
 
-    // 수동의 생성 만들어야 함. @AllArgsConstructor 사용하면 문제 발생 할 수 있다.
+    // 수동생성 만들어야 함. @AllArgsConstructor 사용하면 문제 발생 할 수 있다.
     // withAll 빌더 메서드 이름 변경.
     @Builder(builderMethodName = "withAll")
     public PageResponseDTO(PageRequestDTO pageRequestDTO,
@@ -38,7 +38,6 @@ public class PageResponseDTO<E> {
         this.end = end > last ? last : end;
         this.prev = this.start > 1;
         this.next = total > this.end * this.size;
-
 
     }
 }

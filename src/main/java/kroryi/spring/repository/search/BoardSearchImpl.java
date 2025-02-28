@@ -29,17 +29,11 @@ public class BoardSearchImpl
         BooleanBuilder booleanBuilder = new BooleanBuilder();
         booleanBuilder.or(board.title.contains("--1"));
         booleanBuilder.or(board.content.contains("..2"));
-
         query.where(booleanBuilder); // where title like contains('%', :keyword, '%')
-
         query.where(board.bno.gt(10L));
-
         this.getQuerydsl().applyPagination(pageable, query);
-
         List<Board> list = query.fetch();
-
         Long count = query.fetchCount();
-
         return null;
     }
 
@@ -47,8 +41,6 @@ public class BoardSearchImpl
     public Page<Board> searchAll(String[] types, String keyword, Pageable pageable) {
         QBoard board = QBoard.board;
         JPQLQuery<Board> query = from(board);
-
-        log.info("----------------------{}", types);
 
         if (types != null && types.length > 0 && keyword != null && !keyword.isEmpty()) {
             BooleanBuilder booleanBuilder = new BooleanBuilder();
@@ -85,8 +77,6 @@ public class BoardSearchImpl
 
         this.getQuerydsl().applyPagination(pageable, query);
         List<Board> list = query.fetch();
-
-        log.info("----------------------{}", list);
 
         Long count = query.fetchCount();
 

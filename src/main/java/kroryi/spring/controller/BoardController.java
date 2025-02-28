@@ -23,27 +23,18 @@ public class BoardController {
 
     private final BoardService boardService;
 
-//   @RequiredArgsConstructor를 사용 또는 생성자
-//    public BoardController(BoardService boardService) {
-//        this.boardService = boardService;
-//    }
-
     @GetMapping("/list")
     public String list(@Valid PageRequestDTO pageRequestDTO,
                        BindingResult bindingResult,
                        Model model) {
 
-        log.info("list------------", pageRequestDTO.toString());
         if(bindingResult.hasErrors()) {
             pageRequestDTO = PageRequestDTO.builder().build();
         }
 
-        PageResponseDTO<BoardDTO> boardPage = boardService.getBoardsSearch(pageRequestDTO);
+        PageResponseDTO<BoardDTO> pageResponseDTO = boardService.getBoardsSearch(pageRequestDTO);
 
-//        boardPage.getDtoList().forEach(boardDTO -> {
-//            log.info(boardDTO);
-//        });
-        model.addAttribute("resDTO", boardPage);
+        model.addAttribute("resDTO", pageResponseDTO);
         model.addAttribute("reqDTO", pageRequestDTO);
 
         return "/board/list";

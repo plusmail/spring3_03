@@ -23,11 +23,6 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class PageRequestDTO {
 
-    // ~~~.builder
-    //    .size(1)
-    //    .build()
-    // 이렇게 사용시 page 필드에 1이 초기값을 갖지 못할 수 있다.
-    // 그래서 @Builder.Default를 사용하면 page=1의 값을 가지도록 보장 한다.
     @Builder.Default
     @Min(value = 1)
     @Positive
@@ -49,12 +44,11 @@ public class PageRequestDTO {
 
     private String type;
     private String keyword;
-    private boolean finished;
-    private LocalDate from ;
-    private LocalDate to ;
+    private LocalDate from;
+    private LocalDate to;
 
-    public String[] getTypes(){
-        if(type== null || type.isEmpty()){
+    public String[] getTypes() {
+        if (type == null || type.isEmpty()) {
             return null;
         }
         // "tw,t,twc"
@@ -66,36 +60,22 @@ public class PageRequestDTO {
         return (page - 1) * size;
     }
 
-//    public String getLink() {
-//        if (link == null) {
-//            StringBuffer buffer = new StringBuffer();
-//            buffer.append("page=").append(page)
-//                    .append("&size=").append(size)
-//                    .append("&pageListSize=").append(pageListSize);
-//
-//            link = buffer.toString();
-//        }
-//        log.info("link----> {}", link);
-//
-//        return link;
-//    }
-
-    public String getLink(){
+    public String getLink() {
         // 페이지 번호에 링크를 걸기 위한 것
         // ?page=${page}&size=10&type=tw
-        if(link == null){
+        if (link == null) {
             StringBuilder builder = new StringBuilder();
             builder.append("page=" + this.page);
             builder.append("&size=" + this.size);
-            if(type != null && type.length() > 0){
+            if (type != null && type.length() > 0) {
                 builder.append("&type=" + type);
             }
-            if(keyword != null){
-                try{
+            if (keyword != null) {
+                try {
                     // ?page=1&size=10&keyword=세종대왕
                     // 세종대왕 한글 깨지말라고 인코딩함.
-                    builder.append("&keyword="+ URLEncoder.encode(keyword, "UTF-8"));
-                }catch (UnsupportedEncodingException e){
+                    builder.append("&keyword=" + URLEncoder.encode(keyword, "UTF-8"));
+                } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
             }
