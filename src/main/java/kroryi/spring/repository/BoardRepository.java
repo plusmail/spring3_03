@@ -37,4 +37,9 @@ public interface BoardRepository extends JpaRepository<Board, Integer>, BoardSea
     @Query("SELECT b FROM Board b WHERE b.title like concat('%',:keyword, '%')")
     Page<Board> findByKeyword(@Param("keyword") String keyword, Pageable pageable);
 
+    @Query("SELECT b FROM Board b ORDER BY b.regDate DESC")
+    List<Board> findTop3ByOrderByRegDateDesc(Pageable pageable);
+
+    @Query("SELECT b FROM Board b ORDER BY b.regDate DESC")
+    List<Board> findLatestPosts(Pageable pageable);  // Pageable을 통해 개수 제한
 }
