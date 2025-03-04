@@ -21,7 +21,7 @@ public class GlobalExceptionHandler {
             errors.put(error.getField(), error.getDefaultMessage());
         }
 
-        ErrorResponse response = new ErrorResponse(HttpStatus.BAD_REQUEST.value(), "검정에 문제가 있음. failed", errors);
+        ErrorResponse response = new ErrorResponse(HttpStatus.BAD_REQUEST.value(), "검증에 문제가 있음. failed", errors);
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 }
