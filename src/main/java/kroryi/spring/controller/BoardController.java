@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 @Log4j2
 @Controller
 @RequestMapping("/board")
@@ -30,7 +31,7 @@ public class BoardController {
                        BindingResult bindingResult,
                        Model model) {
 
-        if(bindingResult.hasErrors()) {
+        if (bindingResult.hasErrors()) {
             pageRequestDTO = PageRequestDTO.builder().build();
         }
 
@@ -41,6 +42,7 @@ public class BoardController {
 
         return "/board/list";
     }
+
     @GetMapping("/register")
     public String register() {
 
@@ -95,8 +97,9 @@ public class BoardController {
         redirectAttributes.addFlashAttribute("result", "수정됨");
 
         redirectAttributes.addAttribute("bno", boardDTO.getBno());
-        return "redirect:/board/read/"+boardDTO.getBno();
+        return "redirect:/board/read/" + boardDTO.getBno();
     }
+
     @GetMapping("/modify/{bno}")
     public String modify(@PathVariable int bno, PageRequestDTO pageRequestDTO, Model model) {
         log.info("-------modify -------");
@@ -106,6 +109,7 @@ public class BoardController {
         model.addAttribute("reqDTO", pageRequestDTO);
         return "board/modify";
     }
+
     @PostMapping("/remove/{bno}")
     public String remove(@PathVariable int bno, RedirectAttributes redirectAttributes) {
         boardService.remove(bno);
