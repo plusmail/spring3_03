@@ -44,7 +44,7 @@ public class BoardController {
     @GetMapping("/register")
     public String register() {
 
-        return "/board/register";
+        return "board/register";
     }
 
     @PostMapping("/register")
@@ -68,24 +68,16 @@ public class BoardController {
     }
 
     @GetMapping("/read/{bno}")
-    public String read(int bno, PageRequestDTO pageRequestDTO, Model model) {
+    public String read(@PathVariable int bno, PageRequestDTO pageRequestDTO, Model model) {
         BoardDTO boardDTO = boardService.readOne(bno);
 
         log.info(boardDTO);
 
         model.addAttribute("dto", boardDTO);
-
-        return "/board/read";
+        model.addAttribute("reqDTO", pageRequestDTO);
+        return "board/read";
     }
 
-    @GetMapping("/modify")
-    public String modify(int bno, PageRequestDTO pageRequestDTO, Model model) {
-        log.info("-------modify -------");
-        BoardDTO boardDTO = boardService.readOne(bno);
-        log.info("/board/modify ---> {}", boardDTO);
-        model.addAttribute("dto", boardDTO);
-        return "/board/modify";
-    }
     @PostMapping("/modify")
     public String modify(@Valid BoardDTO boardDTO,
                          PageRequestDTO pageRequestDTO,
@@ -101,11 +93,21 @@ public class BoardController {
         }
         boardService.modify(boardDTO);
         redirectAttributes.addFlashAttribute("result", "수정됨");
+
         redirectAttributes.addAttribute("bno", boardDTO.getBno());
-        return "redirect:/board/read";
+        return "redirect:/board/read/"+boardDTO.getBno();
     }
-    @PostMapping("/remove")
-    public String remove(int bno, RedirectAttributes redirectAttributes) {
+    @GetMapping("/modify/{bno}")
+    public String modify(@PathVariable int bno, PageRequestDTO pageRequestDTO, Model model) {
+        log.info("-------modify -------");
+        BoardDTO boardDTO = boardService.readOne(bno);
+        log.info("/board/modify ---> {}", boardDTO);
+        model.addAttribute("dto", boardDTO);
+        model.addAttribute("reqDTO", pageRequestDTO);
+        return "board/modify";
+    }
+    @PostMapping("/remove/{bno}")
+    public String remove(@PathVariable int bno, RedirectAttributes redirectAttributes) {
         boardService.remove(bno);
         redirectAttributes.addFlashAttribute("result", "삭제되었습니다.");
         return "redirect:/board/list";

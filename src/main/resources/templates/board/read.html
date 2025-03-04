@@ -39,14 +39,12 @@
                                th:value="${#temporals.format(dto.modDate, 'yyyy-MM-dd')}" readonly>
                     </div>
 
-                    <div class="my-4"
-                         th:if="${#authentication.principal instanceof T(org.springframework.security.core.userdetails.UserDetails)}"
-                         th:with="user=${#authentication.principal}">
-                        <div class="float-end" th:with="link = ${pageRequestDTO.getLink()}">
+                    <div class="my-4">
+                        <div class="float-end" th:with="link = ${reqDTO.getLink()}">
                             <a th:href="|@{/board/list}?${link}|" class="text-decoration-none">
                                 <button type="button" class="btn btn-success">목록보기</button>
                             </a>
-                            <a th:if="${user !=null && user.name == dto.writer}" th:href="|@{/board/modify(bno=${dto.bno})}&${link}|" class="text-decoration-none">
+                            <a th:href="|@{'/board/modify/'+ ${dto.bno}(${link})}|" class="text-decoration-none">
                                 <button type="button" class="btn btn-primary">수정하기</button>
                             </a>
                         </div>
@@ -56,7 +54,6 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </div>
 
 <script layout:fragment="script" th:inline="javascript">
