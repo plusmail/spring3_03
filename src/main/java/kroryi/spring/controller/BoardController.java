@@ -110,8 +110,8 @@ public class BoardController {
         return "board/modify";
     }
 
-    @PostMapping("/remove/{bno}")
-    public String remove(@PathVariable int bno, RedirectAttributes redirectAttributes) {
+    @PostMapping("/remove")
+    public String remove(int bno, RedirectAttributes redirectAttributes) {
         boardService.remove(bno);
         redirectAttributes.addFlashAttribute("result", "삭제되었습니다.");
         return "redirect:/board/list";
