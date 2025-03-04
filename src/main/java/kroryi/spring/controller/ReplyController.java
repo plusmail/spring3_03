@@ -36,7 +36,9 @@ public class ReplyController {
         if (bindingResult.hasErrors()) {
             throw new BindException(bindingResult);
         }
-        return ResponseEntity.ok("e등록 성공");
+        return ResponseEntity.ok()
+                .contentType(MediaType.APPLICATION_JSON)
+                .body("{\"message\": \"등록 성공\"}");
     }
 
 }
