@@ -2,6 +2,7 @@ package kroryi.spring.controller;
 
 import jakarta.validation.Valid;
 import kroryi.spring.dto.BoardDTO;
+import kroryi.spring.dto.BoardListReplyCountDTO;
 import kroryi.spring.dto.PageRequestDTO;
 import kroryi.spring.dto.PageResponseDTO;
 import kroryi.spring.service.BoardService;
@@ -33,7 +34,9 @@ public class BoardController {
             pageRequestDTO = PageRequestDTO.builder().build();
         }
 
-        PageResponseDTO<BoardDTO> pageResponseDTO = boardService.getBoardsSearch(pageRequestDTO);
+//        PageResponseDTO<BoardDTO> pageResponseDTO = boardService.list(pageRequestDTO);
+        PageResponseDTO<BoardListReplyCountDTO> pageResponseDTO =
+                boardService.listWithReplyCount(pageRequestDTO);
 
         model.addAttribute("resDTO", pageResponseDTO);
         model.addAttribute("reqDTO", pageRequestDTO);

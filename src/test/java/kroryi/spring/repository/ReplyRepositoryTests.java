@@ -22,7 +22,7 @@ public class ReplyRepositoryTests {
 
     @Test
     public void  testInsert() {
-        Long bno= 51L;
+        Long bno= 100L;
 
         Board board = Board.builder()
                 .bno(bno)
@@ -40,7 +40,7 @@ public class ReplyRepositoryTests {
     @Test
     @Transactional
     public void testBoardReplies(){
-        Long bno = 1L;
+        Long bno = 100L;
         Pageable pageable = PageRequest.of(
                 0, 10,
                 Sort.by("rno").descending());

@@ -53,10 +53,43 @@
             </div>
         </div>
     </div>
+    <!--댓글 영역 시작-->
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <div class="my-4">
+                <button class="btn btn-info addReplyBtn">댓글 등록</button>
+            </div>
+            <ul class="list-group replyList">
+
+            </ul>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <ul class="pagination replyPaging">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--댓글 영역 끝-->
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/reply.js"></script>
 
 </div>
 
 <script layout:fragment="script" th:inline="javascript">
 
+    const bno = [[${dto.bno}]]
+
+    function printReplies(page,size,goLast){
+        getList({bno, page, size, goLast}).then(
+            data => {console.log(data)}
+        ).catch( e=>{
+            console.error(e)
+        })
+    }
+
+    printReplies(1,10)
 
 </script>

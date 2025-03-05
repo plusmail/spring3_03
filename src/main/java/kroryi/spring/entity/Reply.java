@@ -25,7 +25,20 @@ public class Reply extends BaseEntity {
     private String replier;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "board_bno")
+    @JoinColumn(name = "board_bno", nullable = false)
     private Board board;
+
+    public void changeText(String replyText) {
+        this.replyText = replyText;
+    }
+
+    public void changeReplier(String replier) {
+        this.replier = replier;
+    }
+
+    public void changeReplierAndReplyText(String replier, String replyText) {
+        this.replyText = replyText;
+        this.replier = replier;
+    }
 
 }

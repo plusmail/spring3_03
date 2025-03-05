@@ -40,7 +40,7 @@
             <span class="col-4">제목</span>
             <span class="col-2">작성자</span>
             <span class="col-2">작성일</span>
-            <span class="col-2">수정일</span>
+<!--            <span class="col-2">수정일</span>-->
         </li>
 
         <th:block th:each="dto : ${resDTO.dtoList}">
@@ -51,10 +51,13 @@
                     <a th:href="|@{/board/read/{bno}(bno=${dto.bno})}?${reqDTO.getLink()}|"
                        th:text="${dto.title}"
                        class="text-decoration-none"></a>
+                    <span class="badge bg-primary rounded-pill" style="background-color: #0a53be">
+                        [[${dto.replyCount}]]
+                    </span>
                 </span>
                 <span class="col-2" th:text="${dto.writer}"></span>
-                <span class="col-2" th:text="${#temporals.format(dto.regDate, 'yyyy/MM/dd')}"></span>
-                <span class="col-2" th:text="${#temporals.format(dto.modDate, 'yyyy/MM/dd')}"></span>
+                <span class="col-2" th:text="${#temporals.format(dto.regDate, 'yyyy-MM-dd')}"></span>
+                <!--                <span class="col-2" th:text="${#temporals.format(dto.modDate, 'yyyy-MM-dd')}"></span>-->
             </li>
         </th:block>
     </ul>
@@ -66,7 +69,7 @@
                 <a class="page-link" th:data-num="${resDTO.start - 1}">이전</a>
             </li>
             <!-- 페이지 번호 -->
-<!--            #numbers.sequence(start,end) start에서 end까지의 숫자를 생성-->
+            <!--            #numbers.sequence(start,end) start에서 end까지의 숫자를 생성-->
             <li th:each="num : ${#numbers.sequence(resDTO.start, resDTO.end)}"
                 th:classappend="${resDTO.page == num} ? 'active'"
                 class="page-item">

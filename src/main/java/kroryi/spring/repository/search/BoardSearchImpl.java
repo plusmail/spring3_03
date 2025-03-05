@@ -131,6 +131,7 @@ public class BoardSearchImpl
 
         query.where(board.bno.gt(0L));
 
+        // Query결과를 DTO로 변환 해주는 것 ModelMapper와 유사.
         JPQLQuery<BoardListReplyCountDTO> dtoQuery = query.select(Projections.bean(
                 BoardListReplyCountDTO.class,
                 board.bno,

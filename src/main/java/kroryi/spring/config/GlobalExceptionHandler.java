@@ -2,6 +2,7 @@ package kroryi.spring.config;
 
 import kroryi.spring.dto.ErrorResponse;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindException;
@@ -40,7 +41,8 @@ public class GlobalExceptionHandler {
     }
 
     // ✅ 2. 요청된 데이터가 존재하지 않을 때 (예: `NoSuchElementException`)
-    @ExceptionHandler(NoSuchElementException.class)
+    @ExceptionHandler({NoSuchElementException.class,
+            EmptyResultDataAccessException.class})
     public ResponseEntity<ErrorResponse> handleNoSuchElementException(NoSuchElementException ex) {
         ErrorResponse response = ErrorResponse.builder()
                 .status(HttpStatus.NOT_FOUND.value())
