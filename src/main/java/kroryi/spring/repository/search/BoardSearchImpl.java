@@ -1,8 +1,10 @@
 package kroryi.spring.repository.search;
 
 import com.querydsl.core.BooleanBuilder;
+import kroryi.spring.dto.BoardListReplyCountDTO;
 import kroryi.spring.entity.Board;
 import kroryi.spring.entity.QBoard;
+import kroryi.spring.entity.QReply;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -82,4 +84,19 @@ public class BoardSearchImpl
 
         return new PageImpl<>(list, pageable, count);
     }
+
+    @Override
+    public Page<BoardListReplyCountDTO> searchWithReplyCount(String[] types, String keyword, Pageable pageable) {
+
+        QBoard board = QBoard.board;
+        QReply reply = QReply.reply;
+        // Board와 Reply을 조인 시키는 쿼리
+        JPQLQuery<Board> query = from(board);
+
+
+
+        return null;
+    }
+
+
 }

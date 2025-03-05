@@ -59,7 +59,7 @@ public class BoardController {
             return "redirect:/board/register";
         }
 
-        int bno = boardService.register(boardDTO);
+        Long bno = boardService.register(boardDTO);
         log.info(boardDTO);
         redirectAttributes.addFlashAttribute("result", bno);
 
@@ -68,7 +68,7 @@ public class BoardController {
     }
 
     @GetMapping("/read/{bno}")
-    public String read(@PathVariable int bno, PageRequestDTO pageRequestDTO, Model model) {
+    public String read(@PathVariable Long bno, PageRequestDTO pageRequestDTO, Model model) {
         BoardDTO boardDTO = boardService.readOne(bno);
 
         log.info(boardDTO);
@@ -99,7 +99,7 @@ public class BoardController {
     }
 
     @GetMapping("/modify/{bno}")
-    public String modify(@PathVariable int bno, PageRequestDTO pageRequestDTO, Model model) {
+    public String modify(@PathVariable Long bno, PageRequestDTO pageRequestDTO, Model model) {
         log.info("-------modify -------");
         BoardDTO boardDTO = boardService.readOne(bno);
         log.info("/board/modify ---> {}", boardDTO);
@@ -109,7 +109,7 @@ public class BoardController {
     }
 
     @PostMapping("/remove")
-    public String remove(int bno, RedirectAttributes redirectAttributes) {
+    public String remove(Long bno, RedirectAttributes redirectAttributes) {
         boardService.remove(bno);
         redirectAttributes.addFlashAttribute("result", "삭제되었습니다.");
         return "redirect:/board/list";

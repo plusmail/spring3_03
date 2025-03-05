@@ -11,7 +11,7 @@ import org.springframework.data.repository.query.Param;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public interface BoardRepository extends JpaRepository<Board, Integer>, BoardSearch {
+public interface BoardRepository extends JpaRepository<Board, Long>, BoardSearch {
 
 
     @Query(value = "SELECT now()", nativeQuery = true)

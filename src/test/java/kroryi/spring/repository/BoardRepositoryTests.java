@@ -41,7 +41,7 @@ public class BoardRepositoryTests {
 
     @Test
     public void testSelect() {
-        int bno = 100;
+        Long bno = 100L;
         // Optional<Board> 이렇게 하면 Board에 디비에서 가져온 데이터가 null 인지 아닌지 체크 하는 기능.
         // findby~~~ 되어 있는경우 find는 select문
         Optional<Board> result = boardRepository.findById(bno);
@@ -51,7 +51,7 @@ public class BoardRepositoryTests {
 
     @Test
     public void testUpdate() {
-        int bno = 100;
+        Long bno = 100L;
         // Optional<Board> 이렇게 하면 Board에 디비에서 가져온 데이터가 null 인지 아닌지 체크 하는 기능.
         // findby~~~ 되어 있는경우 find는 select문
         Optional<Board> result = boardRepository.findById(bno);
@@ -66,7 +66,7 @@ public class BoardRepositoryTests {
 
     @Test
     public void testDelete() {
-        int bno = 100;
+        Long bno = 100L;
         boardRepository.deleteById(bno);
     }
 

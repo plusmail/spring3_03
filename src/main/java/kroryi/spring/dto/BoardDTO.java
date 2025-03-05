@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BoardDTO implements Serializable {
-    private int bno;
+    private Long bno;
     private String title;
     private String content;
     private String writer;

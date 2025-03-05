@@ -22,7 +22,7 @@ public class ReplyRepositoryTests {
 
     @Test
     public void  testInsert() {
-        int bno = 2;
+        Long bno= 2L;
 
         Board board = Board.builder()
                 .bno(bno)
@@ -30,8 +30,8 @@ public class ReplyRepositoryTests {
 
         Reply reply  = Reply.builder()
                 .board(board)
-                .replyText("댓글 .... 2233")
-                .replier("지나가는 사람22233")
+                .replyText("댓글 .... sdf2233")
+                .replier("지나가는 사람sdf22233")
                 .build();
 
         repository.save(reply);
@@ -40,7 +40,7 @@ public class ReplyRepositoryTests {
     @Test
     @Transactional
     public void testBoardReplies(){
-        int bno = 1;
+        Long bno = 1L;
         Pageable pageable = PageRequest.of(
                 0, 10,
                 Sort.by("rno").descending());

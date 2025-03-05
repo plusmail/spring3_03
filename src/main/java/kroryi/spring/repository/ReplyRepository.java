@@ -11,6 +11,6 @@ import org.springframework.data.domain.Page;
 public interface ReplyRepository extends JpaRepository<Reply, Long> {
 
     @Query("SELECT r FROM Reply r WHERE r.board.bno = :bno")
-    Page<Reply> listOfBoard(int bno, Pageable pageable);
+    Page<Reply> listOfBoard(Long bno, Pageable pageable);
 
 }

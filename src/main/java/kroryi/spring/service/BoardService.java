@@ -44,12 +44,12 @@ public class BoardService {
     }
 
 
-    public int register(BoardDTO boardDTO) {
+    public Long register(BoardDTO boardDTO) {
         Board board = modelMapper.map(boardDTO, Board.class);
         return boardRepository.save(board).getBno();
     }
 
-    public BoardDTO readOne(int bno) {
+    public BoardDTO readOne(Long bno) {
         Optional<Board> result = boardRepository.findById(bno);
         Board board = result.orElseThrow();
 
@@ -68,7 +68,7 @@ public class BoardService {
 
     }
 
-    public void remove(int id) {
+    public void remove(Long id) {
         boardRepository.deleteById(id);
     }
 }
