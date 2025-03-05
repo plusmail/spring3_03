@@ -22,7 +22,7 @@ public class ReplyRepositoryTests {
 
     @Test
     public void  testInsert() {
-        Long bno= 2L;
+        Long bno= 51L;
 
         Board board = Board.builder()
                 .bno(bno)
@@ -30,8 +30,8 @@ public class ReplyRepositoryTests {
 
         Reply reply  = Reply.builder()
                 .board(board)
-                .replyText("댓글 .... sdf2233")
-                .replier("지나가는 사람sdf22233")
+                .replyText("댓글 .... sdf2dfsd")
+                .replier("지나가는 sdf")
                 .build();
 
         repository.save(reply);

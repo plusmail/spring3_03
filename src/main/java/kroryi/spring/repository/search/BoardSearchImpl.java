@@ -1,6 +1,7 @@
 package kroryi.spring.repository.search;
 
 import com.querydsl.core.BooleanBuilder;
+import com.querydsl.core.types.Projections;
 import kroryi.spring.dto.BoardListReplyCountDTO;
 import kroryi.spring.entity.Board;
 import kroryi.spring.entity.QBoard;
@@ -11,6 +12,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 import com.querydsl.jpa.JPQLQuery;
+import org.springframework.expression.spel.ast.Projection;
 
 import java.util.List;
 
@@ -92,10 +94,59 @@ public class BoardSearchImpl
         QReply reply = QReply.reply;
         // Board와 Reply을 조인 시키는 쿼리
         JPQLQuery<Board> query = from(board);
+        query.leftJoin(reply).on(reply.board.eq(board));
+        query.groupBy(board.bno);
 
+        if (types != null && types.length > 0 && keyword != null && !keyword.isEmpty()) {
+            BooleanBuilder booleanBuilder = new BooleanBuilder();
+            for (String type : types) {
+                switch (type) {
+                    case "t":
+                        booleanBuilder.or(board.title.contains(keyword));
+                        break;
+                    case "c":
+                        booleanBuilder.or(board.content.contains(keyword));
+                        break;
+                    case "w":
+                        booleanBuilder.or(board.writer.contains(keyword));
+                        break;
+                    case "tc":
+                        booleanBuilder.or(board.title.contains(keyword))
+                                .or(board.content.contains(keyword));
+                        break;
+                    case "wc":
+                        booleanBuilder.or(board.writer.contains(keyword))
+                                .or(board.content.contains(keyword));
+                        break;
+                    case "wct":
+                        booleanBuilder.or(board.writer.contains(keyword))
+                                .or(board.content.contains(keyword))
+                                .or(board.title.contains(keyword));
+                        break;
 
+                }
+            } // end for
+            query.where(booleanBuilder);
+        }
 
-        return null;
+        query.where(board.bno.gt(0L));
+
+        JPQLQuery<BoardListReplyCountDTO> dtoQuery = query.select(Projections.bean(
+                BoardListReplyCountDTO.class,
+                board.bno,
+                board.title,
+                board.writer,
+                board.regDate,
+                reply.count().as("replyCount")
+        ));
+
+        this.getQuerydsl().applyPagination(pageable, dtoQuery);
+        List<BoardListReplyCountDTO> dtoList = dtoQuery.fetch(); // 실행
+
+        Long count = dtoQuery.fetchCount();
+
+        return new PageImpl<>(dtoList,pageable,count);
+
     }
 
 
