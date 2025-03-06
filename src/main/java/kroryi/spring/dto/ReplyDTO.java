@@ -1,6 +1,8 @@
 package kroryi.spring.dto;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,7 +22,13 @@ public class ReplyDTO {
     private Long bno;
     @NotEmpty
     private String replyText;
-    @NotEmpty
+
     private String replier;
-    private LocalDateTime regDate, modDate;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
+    private LocalDateTime regDate;
+
+    @JsonIgnore
+    private LocalDateTime modDate;
+
 }

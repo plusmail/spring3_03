@@ -73,6 +73,61 @@
     </div>
     <!--댓글 영역 끝-->
 
+    <!--모달영역 시작-->
+
+    <div class="modal registerModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">댓글 등록</h5>
+                    <button type="button" class="btn-close"
+                            data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">댓글 내용</span>
+                        <input type="text" class="form-control replyText">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">작성자</span>
+                        <input type="text" class="form-control replier">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary registerBtn">등록</button>
+                    <button type="button" class="btn btn-outline-dark closeRegisterBtn">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--모달영역 끝-->
+
+    <!--댓글 수정모달 시작-->
+    <div class="modal modifyModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title replyHeader"></h5>
+                    <button type="button" class="btn-close"
+                            data-bs-dismiss="modal" aria-label="Close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">내용</span>
+                        <input type="text" class="form-control modifyText">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info modifyBtn">수정</button>
+                    <button type="button" class="btn btn-danger removeBtn">삭제</button>
+                    <button type="button" class="btn btn-outline-dark closeModifyBtn">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--댓글 수정모달 끝-->
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/js/reply.js"></script>
 
@@ -81,15 +136,198 @@
 <script layout:fragment="script" th:inline="javascript">
 
     const bno = [[${dto.bno}]]
+    const replyList = document.querySelector(".replyList")
+    const replyPaging = document.querySelector(".replyPaging")
 
-    function printReplies(page,size,goLast){
-        getList({bno, page, size, goLast}).then(
-            data => {console.log(data)}
-        ).catch( e=>{
+    // 등록 모달 시작
+    const registerModal = new bootstrap.Modal(document.querySelector(".registerModal"), {
+        backdrop: 'static',
+        keyboard: true
+    })
+
+    const registerBtn = document.querySelector(".registerBtn")
+    const replyText = document.querySelector(".replyText")
+    const replier = document.querySelector(".replier")
+    const closeRegisterBtn = document.querySelector(".closeRegisterBtn")
+
+    document.querySelector(".addReplyBtn").addEventListener("click", (e) => {
+        registerModal.show()
+    }, false)
+
+    closeRegisterBtn.addEventListener("click", (e) => {
+        registerModal.hide()
+    }, false)
+
+    registerBtn.addEventListener("click", (e) => {
+        const replyObj = {
+            bno: bno,
+            replyText: replyText.value,
+            replier: replier.value
+        }
+        console.log(replyObj)
+
+        addReply(replyObj).then(result => {
+            console.log(result.rno)
+            registerModal.hide()
+            replyText.value = ''
+            replier.value = ''
+            printReplies(1, 10, true, false)
+
+        }).catch(e => {
+            console.log("에러 발생")
+        })
+    })
+
+    // 등록 모달 끝
+
+    // 수정 모달 시작
+    const modifyModal = new bootstrap.Modal(document.querySelector(".modifyModal"))
+    const replyHeader = document.querySelector(".replyHeader")
+    const modifyText = document.querySelector(".modifyText")
+    const modifyBtn = document.querySelector(".modifyBtn")
+    const removeBtn = document.querySelector(".removeBtn")
+    const closeModifyBtn = document.querySelector(".closeModifyBtn")
+
+    // 댓글 목록 클릭 후 모달창 띄우기
+    replyList.addEventListener("click", (e) => {
+        e.preventDefault()
+        e.stopPropagation()
+
+        const target = e.target
+        if (!target || target.tagName != 'SPAN') {
+            return
+        }
+        const rno = target.getAttribute("data-rno")
+
+        if (!rno) {
+            return
+        }
+
+        getReply(rno).then(reply => {
+            console.log(reply)
+            replyHeader.innerHTML = reply.rno;
+            modifyText.value = reply.replyText
+            modifyModal.show()
+        }).catch(e => {
+            console.log("error발생")
+        })
+    })
+
+    modifyBtn.addEventListener("click", e=>{
+        // bno, rno, replyText 이것은 ReplyDTO 와 일치
+        const replyObj = {
+            bno:bno,
+            rno:replyHeader.innerHTML,
+            replyText:modifyText.value
+        }
+        modifyReply(replyObj).then( result => {
+            console.log(result.rno +"수정 완료")
+            replyText.value =''
+            modifyModal.hide()
+            printReplies(page, size)
+        }).catch( e=>{
+            console.error(e)
+        })
+
+    }, false)
+
+    closeModifyBtn.addEventListener("click", e=>{
+        modifyModal.hide()
+    }, false)
+
+
+    removeBtn.addEventListener("click", e=>{
+        removeReply(replyHeader.innerHTML).then(result =>{
+            console.log(result.rno +" 를 삭제 했습니다.")
+            replyText.value=''
+            modifyModal.hide()
+            // page = 1
+            printReplies(page, size)
+        }).catch( e=>{
+            console.error(e)
+        })
+    },false)
+
+    // 수정 모달 끝
+
+
+    //페이지 처리 시작
+
+    let page = 1
+    let size = 5
+    replyPaging.addEventListener("click", (e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        const target = e.target
+
+        if (!target || target.tagName != 'A') {
+            return
+        }
+
+        const pageNum = target.getAttribute("data-page")
+        page = pageNum
+
+        printReplies(page, size)
+    }, false)
+
+
+    //페이지 처리 끝
+
+
+    function printList(dtoList) {
+        let str = '';
+        if (dtoList && dtoList.length > 0) {
+            for (const dto of dtoList) {
+                str += `<li class="list-group-item d-flex replyItem">
+                        <span class="col-2">${dto.rno}</span>
+                        <span class="col-6" data-rno="${dto.rno}">${dto.replyText}</span>
+                        <span class="col-2">${dto.replier}</span>
+                        <span class="col-2">${dto.regDate}</span>
+                        </li>`
+            }
+        }
+        replyList.innerHTML = str
+    }
+
+    function printPages(data) {
+        let pageStr = '';
+
+        if (data.prev) {
+            pageStr += `<li class="page-item">
+                        <a class="page-link" data-page="${data.start - 1}">이전</a>
+                        </li>`
+        }
+
+        for (let i = data.start; i <= data.end; i++) {
+            pageStr += `
+            <li class="page-item ${i == data.page ? "active" : ""}" >
+                <a class="page-link" data-page="${i}">${i}</a>
+            </li>
+            `
+
+        }
+
+        if (data.next) {
+            pageStr += `<li class="page-item">
+                            <a class="page-link" data-page="${data.end + 1}">다음</a>
+                        </li>`
+        }
+
+        replyPaging.innerHTML = pageStr
+    }
+
+    function printReplies(page, size, goLast, goFirst) {
+        getList({bno, page, size, goLast, goFirst}).then(
+            data => {
+                console.log(data)
+                printList(data.dtoList)
+                printPages(data)
+            }
+        ).catch(e => {
             console.error(e)
         })
     }
 
-    printReplies(1,10)
+    printReplies(1, 5, true, false)
 
 </script>

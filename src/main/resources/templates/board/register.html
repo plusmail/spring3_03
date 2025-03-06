@@ -5,7 +5,7 @@
       lang="ko">
 
 <div layout:fragment="content">
-    <div class="row mt-3">
+    <div class="row mt-3 w-100">
         <div class="col">
             <div class="card">
                 <div class="card-header">
@@ -24,10 +24,7 @@
                         <div class="input-group mb-3">
                             <span class="input-group-text">작성자</span>
                             <!-- 로컬 사용자일 경우 (UserDetails) -->
-                            <input type="text" class="form-control" name="writer"
-                                   th:if="${#authentication.principal instanceof T(org.springframework.security.core.userdetails.UserDetails)}"
-                                   th:value="${#authentication.principal.name}"
-                                   readonly>
+                            <input type="text" class="form-control" name="writer">
                         </div>
                         <div class="my-4">
                             <div class="float-end">
@@ -47,21 +44,6 @@
 
 
     <script layout:fragment="script" th:inline="javascript">
-        const auth = [[${#authentication.principal}]]
-        console.log(auth)
-
-        const errors = [[${errors}]]
-        console.log(errors)
-
-        let errorMsg = ""
-
-        if (errors) {
-            for (let i = 0; i < errors.length; i++) {
-                errorMsg += `${errors[i].field}은(는) ${errors[i].code} \n`
-            }
-            alert(errorMsg)
-        }
-
 
     </script>
 </div>

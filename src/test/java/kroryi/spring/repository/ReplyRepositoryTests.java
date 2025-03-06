@@ -13,6 +13,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @SpringBootTest
 @Log4j2
 public class ReplyRepositoryTests {
@@ -49,5 +52,26 @@ public class ReplyRepositoryTests {
         replies.getContent().forEach(reply ->{
             log.info(replies.getContent().toString());
         });
+    }
+
+    @Test
+    public void testInsertMultipleReplies() {
+        Long bno = 99L;
+        Board board = Board.builder()
+                .bno(bno)
+                .build();
+
+        List<Reply> replies = new ArrayList<>();
+
+        for (int i = 1; i <= 50; i++) {
+            Reply reply = Reply.builder()
+                    .board(board)
+                    .replyText("댓글...." + i)
+                    .replier("지나가는 사람" + i)
+                    .build();
+            replies.add(reply);
+        }
+
+        repository.saveAll(replies);
     }
 }
