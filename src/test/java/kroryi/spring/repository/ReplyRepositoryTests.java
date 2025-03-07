@@ -56,7 +56,7 @@ public class ReplyRepositoryTests {
 
     @Test
     public void testInsertMultipleReplies() {
-        Long bno = 99L;
+        Long bno = 2L;
         Board board = Board.builder()
                 .bno(bno)
                 .build();

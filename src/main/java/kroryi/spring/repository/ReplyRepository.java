@@ -1,5 +1,6 @@
 package kroryi.spring.repository;
 
+import kroryi.spring.entity.Board;
 import kroryi.spring.entity.Reply;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,5 +13,7 @@ public interface ReplyRepository extends JpaRepository<Reply, Long> {
 
     @Query("SELECT r FROM Reply r WHERE r.board.bno = :bno")
     Page<Reply> listOfBoard(Long bno, Pageable pageable);
+
+    void deleteByBoard_Bno(Long bno);
 
 }

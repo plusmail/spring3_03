@@ -1,8 +1,10 @@
 package kroryi.spring.repository;
 
 
+import jakarta.transaction.Transactional;
 import kroryi.spring.dto.BoardListReplyCountDTO;
 import kroryi.spring.entity.Board;
+import kroryi.spring.entity.BoardImage;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +13,12 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.test.annotation.Commit;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 import java.util.stream.IntStream;
 
 @SpringBootTest
@@ -22,6 +27,9 @@ public class BoardRepositoryTests {
 
     @Autowired
     private BoardRepository boardRepository;
+
+    @Autowired
+    private ReplyRepository replyRepository;
 
 
     @Test
@@ -152,5 +160,85 @@ public class BoardRepositoryTests {
             log.info(board.toString());
         });
     }
+
+
+    @Test
+    public void testInsertWithImages(){
+        Board board = Board.builder()
+                .title("이미지 테스틋")
+                .content("첨부파일 테스트")
+                .writer("user1")
+                .build();
+
+        for(int i=0; i < 3; i++){
+            board.addImage(UUID.randomUUID().toString(), "file"+i+".jpg");
+        }
+
+        boardRepository.save(board);
+    }
+
+    @Test
+    @Transactional
+    public void testReadWithImages(){
+        // fetch방식 (LAZY)는 SELECT 2번(Board 1번, BoardImage 1번)실행 N+1문제
+        Optional<Board> result = boardRepository.findById(102L);
+        Board board = result.orElseThrow();
+        log.info(board.toString());
+        // 연결하고 질의가 끝나면 연결을 끊어 버려서
+        // 다음 boad.getImageSet() 쿼리가 생성되어야 하는데 연결이 끊어져서 실행 안됨.
+        log.info("-----------------1");
+        log.info(board.getImageSet());
+
+    }
+
+    @Test
+    public void testReadWithImages2(){
+        Optional<Board> result = boardRepository.findByIdWithImages(1L);
+        Board board = result.orElseThrow();
+        log.info(board.toString());
+        log.info("-----------------");
+        for(BoardImage image : board.getImageSet()){
+            log.info(image.toString());
+        }
+    }
+
+    @Test
+    public void testReadWithImages3(){
+        List<Object[]> result = boardRepository.findByIdWithImagesJQPL(1L);
+
+        for(Object[] obj : result){
+            log.info(Arrays.toString(obj));
+        }
+
+    }
+
+    @Transactional
+    @Commit
+    @Test
+    public void testModifyWithImages(){
+
+        Optional<Board> result = boardRepository.findByIdWithImages(1L);
+        Board board = result.orElseThrow();
+        board.clearImages();
+
+        for(int i=0; i < 2; i++){
+            board.addImage(UUID.randomUUID().toString(), "file"+i+".jpg");
+        }
+        boardRepository.save(board);
+
+    }
+
+
+    @Test
+    @Transactional
+    @Commit
+    public void testRemoveAll(){
+        Long bno = 1L;
+        replyRepository.deleteByBoard_Bno(bno);
+        boardRepository.deleteById(bno);
+    }
+
+
+
 
 }

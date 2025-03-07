@@ -138,6 +138,8 @@
     const bno = [[${dto.bno}]]
     const replyList = document.querySelector(".replyList")
     const replyPaging = document.querySelector(".replyPaging")
+    let page;
+    let size;
 
     // 등록 모달 시작
     const registerModal = new bootstrap.Modal(document.querySelector(".registerModal"), {
@@ -171,7 +173,7 @@
             registerModal.hide()
             replyText.value = ''
             replier.value = ''
-            printReplies(1, 10, true, false)
+            printReplies(1, this.size, true, false)
 
         }).catch(e => {
             console.log("에러 발생")
@@ -213,48 +215,47 @@
         })
     })
 
-    modifyBtn.addEventListener("click", e=>{
+    modifyBtn.addEventListener("click", e => {
         // bno, rno, replyText 이것은 ReplyDTO 와 일치
         const replyObj = {
-            bno:bno,
-            rno:replyHeader.innerHTML,
-            replyText:modifyText.value
+            bno: bno,
+            rno: replyHeader.innerHTML,
+            replyText: modifyText.value
         }
-        modifyReply(replyObj).then( result => {
-            console.log(result.rno +"수정 완료")
-            replyText.value =''
+        modifyReply(replyObj).then(result => {
+            console.log(result.rno + "수정 완료")
+            replyText.value = ''
             modifyModal.hide()
-            printReplies(page, size)
-        }).catch( e=>{
+            printReplies(this.page, this.size)
+        }).catch(e => {
             console.error(e)
         })
 
     }, false)
 
-    closeModifyBtn.addEventListener("click", e=>{
+    closeModifyBtn.addEventListener("click", e => {
         modifyModal.hide()
     }, false)
 
 
-    removeBtn.addEventListener("click", e=>{
-        removeReply(replyHeader.innerHTML).then(result =>{
-            console.log(result.rno +" 를 삭제 했습니다.")
-            replyText.value=''
+    removeBtn.addEventListener("click", e => {
+        removeReply(replyHeader.innerHTML).then(result => {
+            console.log(result.rno + " 를 삭제 했습니다.")
+            replyText.value = ''
             modifyModal.hide()
             // page = 1
-            printReplies(page, size)
-        }).catch( e=>{
+            printReplies(page, this.size)
+        }).catch(e => {
             console.error(e)
         })
-    },false)
+    }, false)
 
     // 수정 모달 끝
 
 
     //페이지 처리 시작
 
-    let page = 1
-    let size = 5
+
     replyPaging.addEventListener("click", (e) => {
         e.preventDefault()
         e.stopPropagation()
@@ -267,7 +268,7 @@
         const pageNum = target.getAttribute("data-page")
         page = pageNum
 
-        printReplies(page, size)
+        printReplies(page, this.size)
     }, false)
 
 
@@ -317,6 +318,10 @@
     }
 
     function printReplies(page, size, goLast, goFirst) {
+        this.page = page
+        this.size = size
+        console.log("aaaa "+ this.page)
+        console.log("aaaab "+ this.size)
         getList({bno, page, size, goLast, goFirst}).then(
             data => {
                 console.log(data)
@@ -328,6 +333,10 @@
         })
     }
 
-    printReplies(1, 5, true, false)
+    (() => {
+
+        printReplies(1, 5, true, false)
+
+    })();
 
 </script>
