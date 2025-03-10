@@ -26,6 +26,17 @@
                             <!-- 로컬 사용자일 경우 (UserDetails) -->
                             <input type="text" class="form-control" name="writer">
                         </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">이미지들:</span>
+                            <div class="float-end uploadHidden">
+                                <button type="button" class="btn btn-primary uploadFileBtn">
+                                    파일등록
+                                </button>
+                            </div>
+                        </div>
+
+
                         <div class="my-4">
                             <div class="float-end">
                                 <a th:href="|@{/board/list}?${link}|" class="text-decoration-none">
@@ -40,10 +51,80 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+    <!--    첨부파일 섬네일 나올 곳-->
+    <div class="row mt-3">
+        <div class="col">
+            <div class="container-fluid d-flex uploadResult" style="flex-wrap:wrap">
+
+            </div>
+        </div>
+    </div>
+
+    <!--     첨부파일 모달-->
+    <div class="modal uploadModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">업로드 파일</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <input type="file" name="files" class="form-control" multiple>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary uploadBtn">업로드</button>
+                    <button type="button" class="btn btn-outline-dark closeUploadBtn">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/upload.js"></script>
 
     <script layout:fragment="script" th:inline="javascript">
+        const errors = [[${errors}]]
+        console.error(errors)
+        let errorMsg = ''
+        if (errors) {
+            for (let i = 0; i < errors.length; i++) {
+                errorMsg += `${errors[i].field}는 ${errors[i].code} \n`
+            }
+            alert(errorMsg)
+        }
+        const uploadModal = new bootstrap.Modal(document.querySelector(".uploadModal"))
+        document.querySelector(".uploadFileBtn").addEventListener("click", (e) => {
+            e.stopPropagation()
+            e.preventDefault()
+            uploadModal.show()
+        }, false)
+
+
+        document.querySelector(".uploadBtn").addEventListener("click", e => {
+            const formObj = new FormData();
+            const fileInput = document.querySelector("input[name='files']")
+            console.log(fileInput.files)
+            const files = fileInput.files
+            for (let i = 0; i < files.length; i++) {
+                formObj.append("files", files[i])
+            }
+
+            uploadToServer(formObj).then(result => {
+                console.log(result)
+                uploadModal.hide(0)
+            }).catch(e => {
+                console.error(e)
+                uploadModal.hide()
+            })
+
+        },false)  // 버블링(false), 캡처링(true)
+
+        //버블링 이벤트 실행(자식 -> 부모 방향으로 전파
+        //캡처링 이벤트 실행(부모 -> 자식으로 전파
 
     </script>
 </div>

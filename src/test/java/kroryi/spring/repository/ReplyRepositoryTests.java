@@ -56,14 +56,14 @@ public class ReplyRepositoryTests {
 
     @Test
     public void testInsertMultipleReplies() {
-        Long bno = 2L;
+        Long bno = 100L;
         Board board = Board.builder()
                 .bno(bno)
                 .build();
 
         List<Reply> replies = new ArrayList<>();
 
-        for (int i = 1; i <= 50; i++) {
+        for (int i = 1; i <= 10; i++) {
             Reply reply = Reply.builder()
                     .board(board)
                     .replyText("댓글...." + i)

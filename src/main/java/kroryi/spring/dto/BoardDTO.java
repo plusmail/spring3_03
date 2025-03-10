@@ -4,6 +4,7 @@ import lombok.*;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * DTO for {@link kroryi.spring.entity.Board}
@@ -20,4 +21,6 @@ public class BoardDTO implements Serializable {
     private String writer;
     private LocalDateTime regDate;
     private LocalDateTime modDate;
+
+    private List<String> fileNames;
 }

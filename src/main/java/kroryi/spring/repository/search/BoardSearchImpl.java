@@ -1,10 +1,14 @@
 package kroryi.spring.repository.search;
 
 import com.querydsl.core.BooleanBuilder;
+import com.querydsl.core.Tuple;
 import com.querydsl.core.types.Projections;
+import kroryi.spring.dto.BoardImageDTO;
+import kroryi.spring.dto.BoardListAllDTO;
 import kroryi.spring.dto.BoardListReplyCountDTO;
 import kroryi.spring.entity.Board;
 import kroryi.spring.entity.QBoard;
+import kroryi.spring.entity.QBoardImage;
 import kroryi.spring.entity.QReply;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -14,7 +18,9 @@ import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport
 import com.querydsl.jpa.JPQLQuery;
 import org.springframework.expression.spel.ast.Projection;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Slf4j
@@ -40,6 +46,84 @@ public class BoardSearchImpl
         Long count = query.fetchCount();
         return null;
     }
+
+    @Override
+    public Page<BoardListAllDTO> searchWithAll(String[] types, String keyword, Pageable pageable) {
+        QBoard board = QBoard.board;
+        QReply reply = QReply.reply;
+        JPQLQuery<Board> boardQuery = from(board);
+        boardQuery.leftJoin(reply).on(reply.board.eq(board));
+
+        if (types != null && types.length > 0 && keyword != null && !keyword.isEmpty()) {
+            BooleanBuilder booleanBuilder = new BooleanBuilder();
+            for (String type : types) {
+                switch (type) {
+                    case "t":
+                        booleanBuilder.or(board.title.contains(keyword));
+                        break;
+                    case "c":
+                        booleanBuilder.or(board.content.contains(keyword));
+                        break;
+                    case "w":
+                        booleanBuilder.or(board.writer.contains(keyword));
+                        break;
+                    case "tc":
+                        booleanBuilder.or(board.title.contains(keyword))
+                                .or(board.content.contains(keyword));
+                        break;
+                    case "wc":
+                        booleanBuilder.or(board.writer.contains(keyword))
+                                .or(board.content.contains(keyword));
+                        break;
+                    case "wct":
+                        booleanBuilder.or(board.writer.contains(keyword))
+                                .or(board.content.contains(keyword))
+                                .or(board.title.contains(keyword));
+                        break;
+
+                }
+            } // end for
+            boardQuery.where(booleanBuilder);
+        }
+        boardQuery.groupBy(board);
+        this.getQuerydsl().applyPagination(pageable, boardQuery);
+
+        JPQLQuery<Tuple> tupleQuery = boardQuery.select(board,reply.countDistinct());
+
+        List<Tuple> tupleList = tupleQuery.fetch();
+
+        List<BoardListAllDTO> dtoList = tupleList.stream().map(tuple ->{
+            Board board1 = (Board)tuple.get(board);
+            Long replyCount = tuple.get(1, Long.class);
+
+            BoardListAllDTO dto = BoardListAllDTO.builder()
+                    .bno(board1.getBno())
+                    .title(board1.getTitle())
+                    .writer(board1.getWriter())
+                    .regDate(board1.getRegDate())
+                    .replyCount(replyCount)
+                    .build();
+
+
+            List<BoardImageDTO> imageDTOS = board1.getImageSet().stream().sorted()
+                    .map(boardImage -> BoardImageDTO.builder()
+                            .uuid(boardImage.getUuid())
+                            .fileName(boardImage.getFileName())
+                            .ord(boardImage.getOrd())
+                            .build()
+
+                    ).collect(Collectors.toList());
+
+            dto.setBoardImages(imageDTOS);
+
+            return dto;
+        }).collect(Collectors.toList());
+
+        long totalCount = boardQuery.fetchCount(); // 전체게시물 수(페이징 나누기 위해서
+
+        return new PageImpl<>(dtoList, pageable, totalCount);
+    }
+
 
     @Override
     public Page<Board> searchAll(String[] types, String keyword, Pageable pageable) {

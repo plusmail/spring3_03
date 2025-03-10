@@ -2,6 +2,7 @@ package kroryi.spring.repository;
 
 
 import jakarta.transaction.Transactional;
+import kroryi.spring.dto.BoardListAllDTO;
 import kroryi.spring.dto.BoardListReplyCountDTO;
 import kroryi.spring.entity.Board;
 import kroryi.spring.entity.BoardImage;
@@ -125,14 +126,14 @@ public class BoardRepositoryTests {
 
     @Test
     public void testSearchAll() {
-        String[] types = {"t","w"};
+        String[] types = {"t", "w"};
         String keyword = "2";
         Pageable pageable = PageRequest.of(1, 5, Sort.by("bno").descending());
         Page<Board> result = boardRepository.searchAll(types, keyword, pageable);
         log.info(result.getTotalPages());
         log.info(result.getSize());
         log.info(result.getNumber());
-        log.info("{} : {}", result.hasPrevious() , result.hasNext());
+        log.info("{} : {}", result.hasPrevious(), result.hasNext());
         result.forEach(board -> {
             log.info(board.toString());
         });
@@ -140,8 +141,8 @@ public class BoardRepositoryTests {
     }
 
     @Test
-    public void testSearchReplyCount(){
-        String[] types = {"t","c","w"};
+    public void testSearchReplyCount() {
+        String[] types = {"t", "c", "w"};
         String keyword = "1";
         Pageable pageable = PageRequest.of(1,
                 5,
@@ -155,7 +156,7 @@ public class BoardRepositoryTests {
         log.info(result.getTotalPages());
         log.info(result.getSize());
         log.info(result.getNumber());
-        log.info("{} : {}", result.hasPrevious() , result.hasNext());
+        log.info("{} : {}", result.hasPrevious(), result.hasNext());
         result.forEach(board -> {
             log.info(board.toString());
         });
@@ -163,15 +164,15 @@ public class BoardRepositoryTests {
 
 
     @Test
-    public void testInsertWithImages(){
+    public void testInsertWithImages() {
         Board board = Board.builder()
                 .title("이미지 테스틋")
                 .content("첨부파일 테스트")
                 .writer("user1")
                 .build();
 
-        for(int i=0; i < 3; i++){
-            board.addImage(UUID.randomUUID().toString(), "file"+i+".jpg");
+        for (int i = 0; i < 3; i++) {
+            board.addImage(UUID.randomUUID().toString(), "file" + i + ".jpg");
         }
 
         boardRepository.save(board);
@@ -179,7 +180,7 @@ public class BoardRepositoryTests {
 
     @Test
     @Transactional
-    public void testReadWithImages(){
+    public void testReadWithImages() {
         // fetch방식 (LAZY)는 SELECT 2번(Board 1번, BoardImage 1번)실행 N+1문제
         Optional<Board> result = boardRepository.findById(102L);
         Board board = result.orElseThrow();
@@ -192,21 +193,21 @@ public class BoardRepositoryTests {
     }
 
     @Test
-    public void testReadWithImages2(){
+    public void testReadWithImages2() {
         Optional<Board> result = boardRepository.findByIdWithImages(1L);
         Board board = result.orElseThrow();
         log.info(board.toString());
         log.info("-----------------");
-        for(BoardImage image : board.getImageSet()){
+        for (BoardImage image : board.getImageSet()) {
             log.info(image.toString());
         }
     }
 
     @Test
-    public void testReadWithImages3(){
+    public void testReadWithImages3() {
         List<Object[]> result = boardRepository.findByIdWithImagesJQPL(1L);
 
-        for(Object[] obj : result){
+        for (Object[] obj : result) {
             log.info(Arrays.toString(obj));
         }
 
@@ -215,14 +216,14 @@ public class BoardRepositoryTests {
     @Transactional
     @Commit
     @Test
-    public void testModifyWithImages(){
+    public void testModifyWithImages() {
 
         Optional<Board> result = boardRepository.findByIdWithImages(1L);
         Board board = result.orElseThrow();
         board.clearImages();
 
-        for(int i=0; i < 2; i++){
-            board.addImage(UUID.randomUUID().toString(), "file"+i+".jpg");
+        for (int i = 0; i < 2; i++) {
+            board.addImage(UUID.randomUUID().toString(), "file" + i + ".jpg");
         }
         boardRepository.save(board);
 
@@ -232,13 +233,51 @@ public class BoardRepositoryTests {
     @Test
     @Transactional
     @Commit
-    public void testRemoveAll(){
-        Long bno = 1L;
+    public void testRemoveAll() {
+        Long bno = 2L;
+        //외래키로 연결되었을때는 자식 테이블(참조하는 테이블 부터 삭제)
         replyRepository.deleteByBoard_Bno(bno);
         boardRepository.deleteById(bno);
     }
 
 
+    @Test
+    public void testInsertAll() {
+        for (int i = 1; i <= 100; i++) {
 
+            Board board = Board.builder()
+                    .title("타이블..." + i)
+                    .content("내용..." + i)
+                    .writer("user" + i)
+                    .build();
+            for (int j = 0; j < 3; j++) {
+                if (i % 5 == 0) {
+                    continue;
+                }
+                board.addImage(UUID.randomUUID().toString(), "file" + j + ".jpg");
+            }
+            boardRepository.save(board);
+        }
+    }
+
+
+    @Transactional
+    @Test
+    public void testSearchImageReplyCount() {
+        Pageable pageable =
+                PageRequest.of(0,
+                        5,
+                        Sort.by("bno").descending());
+
+        Page<BoardListAllDTO> result =
+                boardRepository.searchWithAll(null,null,pageable);
+
+        log.info(result.getTotalPages());
+        log.info(result.getTotalElements());
+        result.getContent().forEach(board -> {
+            log.info(board.toString());
+        });
+
+    }
 
 }

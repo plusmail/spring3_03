@@ -3,6 +3,7 @@ package kroryi.spring.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.BatchSize;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -38,6 +39,8 @@ public class Board extends BaseEntity {
             orphanRemoval = true
     )
     @Builder.Default
+    @BatchSize(size = 5) // 페이징 사이즈 만큼 숫자를 사용 한번 쿼리로 5개의 이미지 조회
+    // ~~~ where board_image.board_bno in (?,?,?,?,?)
     private Set<BoardImage> imageSet = new HashSet<>();
 
     public void change(String title, String content){
@@ -62,6 +65,6 @@ public class Board extends BaseEntity {
 
     public void clearImages() {
         imageSet.forEach(image -> image.changeBoard(null));
-        this.imageSet.clear();
+        this.imageSet.clear(); // clear() 쿼리에서는 delete  문 실행
     }
 }
