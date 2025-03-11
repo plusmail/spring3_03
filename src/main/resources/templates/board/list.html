@@ -28,26 +28,27 @@
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary searchBtn" type="submit">검색</button>
                     <button class="btn btn-outline-secondary clearBtn" type="button">리셋</button>
+                    <button class="btn btn-danger addBtn" type="button">글등록</button>
                 </div>
             </div>
         </form>
     </div>
+    <div>&nbsp;</div>
 
 
     <ul class="list-group">
         <li class="list-group-item active d-flex justify-content-between">
-            <span class="col-1">번호</span>
-            <span class="col-4">제목</span>
-            <span class="col-2">이미지</span>
-            <span class="col-2">작성자</span>
-            <span class="col-2">작성일</span>
+            <span class="col-1 px-md-2 text-center">번호</span>
+            <span class="col-5 px-md-2 text-center">제목</span>
+            <span class="col-2 px-md-2 text-center">작성자</span>
+            <span class="col-2 px-md-2 text-center">작성일</span>
             <!--            <span class="col-2">수정일</span>-->
         </li>
 
         <th:block th:each="dto : ${resDTO.dtoList}">
-            <li class="list-group-item d-flex justify-content-between">
-                <span class="col-1" th:text="${dto.bno}"></span>
-                <span class="col-4">
+            <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between">
+                <span class="col-1 px-md-2 text-end" th:text="${dto.bno}"></span>
+                <span class="col-5 px-md-2 ">
 <!--                    // JS에서 `안녕  ${name} 반가워 ` thymeleaf에서는 |안녕  ${name} 반가워 |-->
                     <a th:href="|@{/board/read/{bno}(bno=${dto.bno})}?${reqDTO.getLink()}|"
                        th:text="${dto.title}"
@@ -56,19 +57,41 @@
                     <span class="badge bg-primary rounded-pill" style="background-color: #0a53be">
                         [[${dto.replyCount}]]
                     </span>
-                    <span th:if="${dto.boardImages != null && dto.boardImages.size() >0}">
-                        <img style="width:80px" th:each="boardImage: ${dto.boardImages}"
-                             th:src="|/view/s_${boardImage.uuid}_${boardImage.fileName}|">
-                    </span>
+                    <!-- 캐러셀: 이미지가 2개 이상일 때만 표시 -->
+                    <div th:if="${dto.boardImages != null and dto.boardImages.size() > 0}"
+                         th:id="|carousel-${dto.bno}|" class="carousel slide ms-2" data-bs-ride="carousel" style="width: 100px;">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item" th:each="boardImage, iterStat : ${dto.boardImages}"
+                                 th:classappend="${iterStat.first} ? 'active' : ''">
+                                <img style="width:100px; height: 60px; object-fit: cover;"
+                                     th:src="|/view/s_${boardImage.uuid}_${boardImage.fileName}|" class="d-block w-100">
+                            </div>
+                        </div>
+
+                        <!-- 이전 버튼 -->
+                        <button class="carousel-control-prev" type="button" th:data-bs-target="|#carousel-${dto.bno}|"
+                                data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+
+                        <!-- 다음 버튼 -->
+                        <button class="carousel-control-next" type="button" th:data-bs-target="|#carousel-${dto.bno}|"
+                                data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
+                    </div>
 
                 </span>
-                <span class="col-2" th:text="${dto.writer}"></span>
-                <span class="col-2" th:text="${#temporals.format(dto.regDate, 'yyyy-MM-dd')}"></span>
+                <span class="col-2 px-md-2 text-center" th:text="${dto.writer}"></span>
+                <span class="col-2 px-md-2 text-center"
+                      th:text="${#temporals.format(dto.regDate, 'yyyy-MM-dd')}"></span>
                 <!--                <span class="col-2" th:text="${#temporals.format(dto.modDate, 'yyyy-MM-dd')}"></span>-->
 
             </li>
         </th:block>
     </ul>
+    <div>&nbsp;</div>
 
     <div>
         <ul class="pagination d-flex justify-content-center">
@@ -93,6 +116,14 @@
 </div>
 <th:block layout:fragment="script">
     <script>
+        const addBtn = document.querySelector(".addBtn")
+
+        addBtn.addEventListener("click", e => {
+
+            self.location = "/board/register"
+        })
+
+
         document.querySelector(".pagination").addEventListener("click", (e) => {
             e.preventDefault()
             e.stopPropagation()
