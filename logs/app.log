@@ -1,0 +1,52 @@
+2025-03-11 09:06:16 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-11 09:06:16 [34m[restartedMain][0;39m [36mINFO [0;39m kroryi.spring.Spring303Application - Starting Spring303Application using Java 17.0.13 with PID 2672 (C:\Users\edu\IdeaProjects\spring3_03\target\classes started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-11 09:06:16 [39m[restartedMain][0;39m [36mDEBUG[0;39m kroryi.spring.Spring303Application - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-11 09:06:16 [34m[restartedMain][0;39m [36mINFO [0;39m kroryi.spring.Spring303Application - No active profile set, falling back to 1 default profile: "default"
+2025-03-11 09:06:16 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-11 09:06:16 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-11 09:06:18 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-11 09:06:18 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 4 JPA repository interfaces.
+2025-03-11 09:06:19 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-03-11 09:06:19 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-11 09:06:19 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-11 09:06:19 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-11 09:06:19 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-11 09:06:19 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2908 ms
+2025-03-11 09:06:20 [34m[restartedMain][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-11 09:06:20 [34m[restartedMain][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-11 09:06:20 [34m[restartedMain][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-11 09:06:20 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-11 09:06:20 [34m[restartedMain][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-11 09:06:21 [34m[restartedMain][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40629c47
+2025-03-11 09:06:21 [34m[restartedMain][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-11 09:06:21 [31m[restartedMain][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-11 09:06:21 [31m[restartedMain][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-11 09:06:21 [34m[restartedMain][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-11 09:06:22 [34m[restartedMain][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-11 09:06:22 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-11 09:06:23 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-11 09:06:25 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-11 09:06:25 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-11 09:06:25 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-03-11 09:06:25 [34m[restartedMain][0;39m [36mINFO [0;39m kroryi.spring.Spring303Application - Started Spring303Application in 9.926 seconds (process running for 12.611)
+2025-03-11 09:06:41 [34m[http-nio-8080-exec-1][0;39m [36mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-11 09:06:41 [34m[http-nio-8080-exec-1][0;39m [36mINFO [0;39m o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-11 09:06:41 [34m[http-nio-8080-exec-1][0;39m [36mINFO [0;39m o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-03-11 09:08:37 [34m[http-nio-8080-exec-6][0;39m [36mINFO [0;39m k.spring.controller.UpDownController - UploadFileDTO(files=[org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@17a8a3a8])
+2025-03-11 09:08:37 [34m[http-nio-8080-exec-6][0;39m [36mINFO [0;39m k.spring.controller.UpDownController - computer-icons-ninja-favicon-iconfinder-avatar-png-favpng-Jku9r1TGGY4Ha6BLUXz1eL3DQ.jpg
+2025-03-11 09:08:37 [34m[http-nio-8080-exec-6][0;39m [36mINFO [0;39m k.spring.controller.UpDownController - d:\upload\1a8fa876-0d8e-4998-bdb1-bee3620651a0_computer-icons-ninja-favicon-iconfinder-avatar-png-favpng-Jku9r1TGGY4Ha6BLUXz1eL3DQ.jpg
+2025-03-11 09:08:39 [34m[http-nio-8080-exec-7][0;39m [36mINFO [0;39m k.spring.controller.BoardController - ------------register============
+2025-03-11 09:08:39 [34m[http-nio-8080-exec-7][0;39m [36mINFO [0;39m k.spring.controller.BoardController - BoardDTO(bno=null, title=1111111111111, content=2222222222222222, writer=2222, regDate=null, modDate=null, fileNames=null)
+2025-03-11 09:08:45 [34m[http-nio-8080-exec-9][0;39m [36mINFO [0;39m k.spring.controller.BoardController - BoardDTO(bno=103, title=1111111111111, content=2222222222222222, writer=2222, regDate=2025-03-11T09:08:39.595385, modDate=2025-03-11T09:08:39.595385, fileNames=[])
+2025-03-11 09:08:45 [34m[http-nio-8080-exec-1][0;39m [36mINFO [0;39m k.spring.service.ReplyServiceImpl - Page request [number: 0, size 5, sort: rno: ASC]
+2025-03-11 09:08:45 [34m[http-nio-8080-exec-3][0;39m [36mINFO [0;39m k.spring.service.ReplyServiceImpl - Page request [number: 0, size 5, sort: rno: ASC]
+2025-03-11 09:08:49 [34m[http-nio-8080-exec-2][0;39m [36mINFO [0;39m k.spring.controller.BoardController - BoardDTO(bno=103, title=1111111111111, content=2222222222222222, writer=2222, regDate=2025-03-11T09:08:39.595385, modDate=2025-03-11T09:08:39.595385, fileNames=[])
+2025-03-11 09:08:49 [34m[http-nio-8080-exec-4][0;39m [36mINFO [0;39m k.spring.service.ReplyServiceImpl - Page request [number: 0, size 5, sort: rno: ASC]
+2025-03-11 09:08:49 [34m[http-nio-8080-exec-5][0;39m [36mINFO [0;39m k.spring.service.ReplyServiceImpl - Page request [number: 0, size 5, sort: rno: ASC]

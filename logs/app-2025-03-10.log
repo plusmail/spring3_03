@@ -1,0 +1,1232 @@
+2025-03-10 09:23:52 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 09:23:52 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Starting BoardRepositoryTests using Java 17.0.13 with PID 8332 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 09:23:52 [39m[main][0;39m [36mDEBUG[0;39m k.s.repository.BoardRepositoryTests - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 09:23:52 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 09:23:53 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 09:23:53 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 81 ms. Found 4 JPA repository interfaces.
+2025-03-10 09:23:55 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 09:23:55 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 09:23:55 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 09:23:55 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 09:23:55 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 09:23:56 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@25e353dc
+2025-03-10 09:23:56 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 09:23:56 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 09:23:56 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 09:23:56 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 09:23:58 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 09:23:58 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 09:23:58 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 09:24:01 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Started BoardRepositoryTests in 9.844 seconds (process running for 12.055)
+2025-03-10 09:24:02 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 09:24:02 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 09:24:02 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 09:25:15 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 09:25:15 [34m[main][0;39m [36mINFO [0;39m k.s.repository.ReplyRepositoryTests - Starting ReplyRepositoryTests using Java 17.0.13 with PID 11380 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 09:25:15 [39m[main][0;39m [36mDEBUG[0;39m k.s.repository.ReplyRepositoryTests - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 09:25:15 [34m[main][0;39m [36mINFO [0;39m k.s.repository.ReplyRepositoryTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 09:25:16 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 09:25:16 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79 ms. Found 4 JPA repository interfaces.
+2025-03-10 09:25:17 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 09:25:17 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 09:25:17 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 09:25:18 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 09:25:18 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 09:25:18 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7097d921
+2025-03-10 09:25:18 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 09:25:18 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 09:25:18 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 09:25:18 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 09:25:20 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 09:25:20 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 09:25:20 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 09:25:23 [34m[main][0;39m [36mINFO [0;39m k.s.repository.ReplyRepositoryTests - Started ReplyRepositoryTests in 8.878 seconds (process running for 10.798)
+2025-03-10 09:25:24 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 09:25:24 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 09:25:24 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 09:25:50 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 09:25:50 [34m[main][0;39m [36mINFO [0;39m k.s.repository.ReplyRepositoryTests - Starting ReplyRepositoryTests using Java 17.0.13 with PID 10376 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 09:25:50 [39m[main][0;39m [36mDEBUG[0;39m k.s.repository.ReplyRepositoryTests - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 09:25:50 [34m[main][0;39m [36mINFO [0;39m k.s.repository.ReplyRepositoryTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 09:25:51 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 09:25:51 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 4 JPA repository interfaces.
+2025-03-10 09:25:52 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 09:25:52 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 09:25:52 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 09:25:53 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 09:25:53 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 09:25:53 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@129c760d
+2025-03-10 09:25:53 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 09:25:53 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 09:25:53 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 09:25:53 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 09:25:55 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 09:25:55 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 09:25:55 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 09:25:58 [34m[main][0;39m [36mINFO [0;39m k.s.repository.ReplyRepositoryTests - Started ReplyRepositoryTests in 8.518 seconds (process running for 10.35)
+2025-03-10 09:25:59 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 09:25:59 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 09:25:59 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 09:27:38 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 09:27:38 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Starting BoardRepositoryTests using Java 17.0.13 with PID 10732 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 09:27:38 [39m[main][0;39m [36mDEBUG[0;39m k.s.repository.BoardRepositoryTests - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 09:27:38 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 09:27:39 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 09:27:39 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 71 ms. Found 4 JPA repository interfaces.
+2025-03-10 09:27:40 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 09:27:40 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 09:27:40 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 09:27:41 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 09:27:41 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 09:27:41 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a6b94b6
+2025-03-10 09:27:41 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 09:27:41 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 09:27:41 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 09:27:41 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 09:27:43 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 09:27:43 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 09:27:43 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 09:27:46 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Started BoardRepositoryTests in 8.635 seconds (process running for 10.525)
+2025-03-10 09:27:47 [31m[main][0;39m [36mWARN [0;39m o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
+2025-03-10 09:27:47 [1;31m[main][0;39m [36mERROR[0;39m o.h.e.jdbc.spi.SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`spring_webdb`.`reply`, CONSTRAINT `FKr1bmblqir7dalmh47ngwo7mcs` FOREIGN KEY (`board_bno`) REFERENCES `board` (`bno`))
+2025-03-10 09:27:47 [31m[main][0;39m [36mWARN [0;39m o.s.test.context.TestContextManager - Caught exception while invoking 'afterTestMethod' callback on TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] for test method [public void kroryi.spring.repository.BoardRepositoryTests.testRemoveAll()] and test instance [kroryi.spring.repository.BoardRepositoryTests@c73b9fc]
+org.springframework.dao.DataIntegrityViolationException: could not execute statement [Cannot delete or update a parent row: a foreign key constraint fails (`spring_webdb`.`reply`, CONSTRAINT `FKr1bmblqir7dalmh47ngwo7mcs` FOREIGN KEY (`board_bno`) REFERENCES `board` (`bno`))] [delete from board where bno=?]; SQL [delete from board where bno=?]; constraint [null]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:290)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:566)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758)
+	at org.springframework.test.context.transaction.TransactionContext.endTransaction(TransactionContext.java:135)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.afterTestMethod(TransactionalTestExecutionListener.java:272)
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:488)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.afterEach(SpringExtension.java:275)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$13(TestMethodTestDescriptor.java:260)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:276)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$15(TestMethodTestDescriptor.java:276)
+	at org.junit.platform.commons.util.CollectionUtils.forEachInReverseOrder(CollectionUtils.java:240)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:275)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:144)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [Cannot delete or update a parent row: a foreign key constraint fails (`spring_webdb`.`reply`, CONSTRAINT `FKr1bmblqir7dalmh47ngwo7mcs` FOREIGN KEY (`board_bno`) REFERENCES `board` (`bno`))] [delete from board where bno=?]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:62)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:134)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:55)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
+	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.doStaticDelete(AbstractDeleteCoordinator.java:279)
+	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.delete(AbstractDeleteCoordinator.java:87)
+	at org.hibernate.action.internal.EntityDeleteAction.execute(EntityDeleteAction.java:131)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:644)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:511)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:414)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1429)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:491)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2354)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1978)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	... 62 common frames omitted
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`spring_webdb`.`reply`, CONSTRAINT `FKr1bmblqir7dalmh47ngwo7mcs` FOREIGN KEY (`board_bno`) REFERENCES `board` (`bno`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1467)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
+	... 82 common frames omitted
+2025-03-10 09:27:47 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 09:27:47 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 09:27:47 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 09:28:44 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 09:28:44 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Starting BoardRepositoryTests using Java 17.0.13 with PID 7712 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 09:28:44 [39m[main][0;39m [36mDEBUG[0;39m k.s.repository.BoardRepositoryTests - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 09:28:44 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 09:28:45 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 09:28:45 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 4 JPA repository interfaces.
+2025-03-10 09:28:46 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 09:28:46 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 09:28:46 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 09:28:47 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 09:28:47 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 09:28:47 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@234ce7ff
+2025-03-10 09:28:47 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 09:28:47 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 09:28:47 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 09:28:47 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 09:28:49 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 09:28:49 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 09:28:49 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 09:28:52 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Started BoardRepositoryTests in 8.638 seconds (process running for 10.475)
+2025-03-10 09:28:53 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 09:28:53 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 09:28:53 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 09:38:38 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 09:38:38 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Starting BoardRepositoryTests using Java 17.0.13 with PID 15864 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 09:38:38 [39m[main][0;39m [36mDEBUG[0;39m k.s.repository.BoardRepositoryTests - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 09:38:38 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 09:38:39 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 09:38:39 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 70 ms. Found 4 JPA repository interfaces.
+2025-03-10 09:38:40 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 09:38:40 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 09:38:40 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 09:38:41 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 09:38:41 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 09:38:41 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f70bce5
+2025-03-10 09:38:41 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 09:38:41 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 09:38:41 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 09:38:41 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 09:38:43 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 09:38:43 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 09:38:44 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 09:38:46 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Started BoardRepositoryTests in 9.362 seconds (process running for 11.408)
+2025-03-10 09:38:49 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 09:38:49 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 09:38:49 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 10:09:15 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 10:09:15 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Starting BoardRepositoryTests using Java 17.0.13 with PID 12916 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 10:09:15 [39m[main][0;39m [36mDEBUG[0;39m k.s.repository.BoardRepositoryTests - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 10:09:15 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 10:09:16 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 10:09:17 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 80 ms. Found 4 JPA repository interfaces.
+2025-03-10 10:09:18 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 10:09:18 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 10:09:18 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 10:09:18 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 10:09:18 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 10:09:19 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58ac0823
+2025-03-10 10:09:19 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 10:09:19 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 10:09:19 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 10:09:19 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 10:09:20 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 10:09:21 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 10:09:21 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 10:09:23 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Started BoardRepositoryTests in 8.793 seconds (process running for 10.733)
+2025-03-10 10:09:24 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 95
+2025-03-10 10:09:24 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - []
+2025-03-10 10:09:24 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:09:24 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 94
+2025-03-10 10:09:24 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - [BoardImage(uuid=3581c545-6a2d-4e8d-b3b5-fcbb8bbc4b0c, fileName=file2.jpg, ord=2), BoardImage(uuid=b1dc6213-678d-4a6d-97ad-59ba443e41d5, fileName=file0.jpg, ord=0), BoardImage(uuid=111625d4-e303-4578-8e1f-79b24ce2cdbc, fileName=file1.jpg, ord=1)]
+2025-03-10 10:09:24 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:09:24 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 93
+2025-03-10 10:09:24 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - [BoardImage(uuid=39c07c22-854b-434d-85b5-f9f3ec37a455, fileName=file1.jpg, ord=1), BoardImage(uuid=da49fddc-6813-432e-89ca-47ed05d41de9, fileName=file2.jpg, ord=2), BoardImage(uuid=1e6b77a8-4cff-48de-80da-bc45e0c1e8b3, fileName=file0.jpg, ord=0)]
+2025-03-10 10:09:24 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:09:24 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 92
+2025-03-10 10:09:24 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - [BoardImage(uuid=8fd18fea-10f0-4012-8cb7-3e4bf728a622, fileName=file0.jpg, ord=0), BoardImage(uuid=bf34cde1-f29f-495b-a5f3-742a6333ba5e, fileName=file1.jpg, ord=1), BoardImage(uuid=7bf52714-e700-4e79-80ae-0ebba9b5fcd0, fileName=file2.jpg, ord=2)]
+2025-03-10 10:09:24 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:09:24 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 91
+2025-03-10 10:09:24 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - [BoardImage(uuid=b6660115-545c-4064-9f16-e041bc0cbb26, fileName=file2.jpg, ord=2), BoardImage(uuid=35bb82f0-b877-4181-8817-1fe8dfc3f36f, fileName=file0.jpg, ord=0), BoardImage(uuid=e0baf9b2-e746-4cd7-8efa-6cbaff9aba66, fileName=file1.jpg, ord=1)]
+2025-03-10 10:09:24 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:09:24 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 10:09:24 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 10:09:25 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 10:15:58 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 10:15:58 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Starting BoardRepositoryTests using Java 17.0.13 with PID 900 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 10:15:58 [39m[main][0;39m [36mDEBUG[0;39m k.s.repository.BoardRepositoryTests - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 10:15:58 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 10:15:59 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 10:15:59 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 4 JPA repository interfaces.
+2025-03-10 10:16:00 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 10:16:00 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 10:16:00 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 10:16:01 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 10:16:01 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 10:16:01 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@780a91d0
+2025-03-10 10:16:01 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 10:16:01 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 10:16:01 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 10:16:01 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 10:16:03 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 10:16:03 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 10:16:04 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 10:16:07 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Started BoardRepositoryTests in 9.916 seconds (process running for 12.073)
+2025-03-10 10:16:08 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 95
+2025-03-10 10:16:08 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:16:08 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 94
+2025-03-10 10:16:08 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:16:08 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 93
+2025-03-10 10:16:08 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:16:08 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 92
+2025-03-10 10:16:08 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:16:08 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 91
+2025-03-10 10:16:08 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:16:08 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 10:16:08 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 10:16:08 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 10:20:14 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 10:20:14 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Starting BoardRepositoryTests using Java 17.0.13 with PID 12380 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 10:20:14 [39m[main][0;39m [36mDEBUG[0;39m k.s.repository.BoardRepositoryTests - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 10:20:14 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 10:20:15 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 10:20:15 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 4 JPA repository interfaces.
+2025-03-10 10:20:16 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 10:20:16 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 10:20:16 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 10:20:17 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 10:20:17 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 10:20:17 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6247c08c
+2025-03-10 10:20:17 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 10:20:17 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 10:20:17 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 10:20:17 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 10:20:19 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 10:20:19 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 10:20:20 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 10:20:22 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Started BoardRepositoryTests in 8.919 seconds (process running for 10.878)
+2025-03-10 10:20:23 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 98
+2025-03-10 10:20:23 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:20:23 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 97
+2025-03-10 10:20:23 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:20:23 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 10:20:23 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 10:20:23 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 10:24:17 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 10:24:17 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Starting BoardRepositoryTests using Java 17.0.13 with PID 13096 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 10:24:17 [39m[main][0;39m [36mDEBUG[0;39m k.s.repository.BoardRepositoryTests - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 10:24:17 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 10:24:18 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 10:24:18 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 4 JPA repository interfaces.
+2025-03-10 10:24:19 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 10:24:20 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 10:24:20 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 10:24:20 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 10:24:20 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 10:24:20 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@180f33b2
+2025-03-10 10:24:20 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 10:24:20 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 10:24:20 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 10:24:21 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 10:24:22 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 10:24:22 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 10:24:23 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 10:24:26 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Started BoardRepositoryTests in 9.562 seconds (process running for 11.738)
+2025-03-10 10:24:27 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 95
+2025-03-10 10:24:27 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - []
+2025-03-10 10:24:27 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:24:27 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 94
+2025-03-10 10:24:27 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - [BoardImage(uuid=b1dc6213-678d-4a6d-97ad-59ba443e41d5, fileName=file0.jpg, ord=0), BoardImage(uuid=111625d4-e303-4578-8e1f-79b24ce2cdbc, fileName=file1.jpg, ord=1), BoardImage(uuid=3581c545-6a2d-4e8d-b3b5-fcbb8bbc4b0c, fileName=file2.jpg, ord=2)]
+2025-03-10 10:24:27 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:24:27 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 93
+2025-03-10 10:24:27 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - [BoardImage(uuid=1e6b77a8-4cff-48de-80da-bc45e0c1e8b3, fileName=file0.jpg, ord=0), BoardImage(uuid=39c07c22-854b-434d-85b5-f9f3ec37a455, fileName=file1.jpg, ord=1), BoardImage(uuid=da49fddc-6813-432e-89ca-47ed05d41de9, fileName=file2.jpg, ord=2)]
+2025-03-10 10:24:27 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:24:27 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 92
+2025-03-10 10:24:27 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - [BoardImage(uuid=8fd18fea-10f0-4012-8cb7-3e4bf728a622, fileName=file0.jpg, ord=0), BoardImage(uuid=7bf52714-e700-4e79-80ae-0ebba9b5fcd0, fileName=file2.jpg, ord=2), BoardImage(uuid=bf34cde1-f29f-495b-a5f3-742a6333ba5e, fileName=file1.jpg, ord=1)]
+2025-03-10 10:24:27 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:24:27 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 91
+2025-03-10 10:24:27 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - [BoardImage(uuid=b6660115-545c-4064-9f16-e041bc0cbb26, fileName=file2.jpg, ord=2), BoardImage(uuid=35bb82f0-b877-4181-8817-1fe8dfc3f36f, fileName=file0.jpg, ord=0), BoardImage(uuid=e0baf9b2-e746-4cd7-8efa-6cbaff9aba66, fileName=file1.jpg, ord=1)]
+2025-03-10 10:24:27 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:24:27 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 10:24:27 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 10:24:27 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 10:28:05 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 10:28:05 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Starting BoardRepositoryTests using Java 17.0.13 with PID 368 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 10:28:05 [39m[main][0;39m [36mDEBUG[0;39m k.s.repository.BoardRepositoryTests - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 10:28:05 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 10:28:07 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 10:28:07 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 77 ms. Found 4 JPA repository interfaces.
+2025-03-10 10:28:08 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 10:28:08 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 10:28:08 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 10:28:09 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 10:28:09 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 10:28:09 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b4f1eb
+2025-03-10 10:28:09 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 10:28:09 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 10:28:09 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 10:28:09 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 10:28:11 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 10:28:11 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 10:28:11 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 10:28:14 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Started BoardRepositoryTests in 8.85 seconds (process running for 10.858)
+2025-03-10 10:28:15 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 95
+2025-03-10 10:28:15 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - []
+2025-03-10 10:28:15 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:28:15 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 94
+2025-03-10 10:28:15 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - [BoardImage(uuid=3581c545-6a2d-4e8d-b3b5-fcbb8bbc4b0c, fileName=file2.jpg, ord=2), BoardImage(uuid=b1dc6213-678d-4a6d-97ad-59ba443e41d5, fileName=file0.jpg, ord=0), BoardImage(uuid=111625d4-e303-4578-8e1f-79b24ce2cdbc, fileName=file1.jpg, ord=1)]
+2025-03-10 10:28:15 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:28:15 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 93
+2025-03-10 10:28:15 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - [BoardImage(uuid=39c07c22-854b-434d-85b5-f9f3ec37a455, fileName=file1.jpg, ord=1), BoardImage(uuid=1e6b77a8-4cff-48de-80da-bc45e0c1e8b3, fileName=file0.jpg, ord=0), BoardImage(uuid=da49fddc-6813-432e-89ca-47ed05d41de9, fileName=file2.jpg, ord=2)]
+2025-03-10 10:28:15 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:28:15 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 92
+2025-03-10 10:28:15 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - [BoardImage(uuid=bf34cde1-f29f-495b-a5f3-742a6333ba5e, fileName=file1.jpg, ord=1), BoardImage(uuid=8fd18fea-10f0-4012-8cb7-3e4bf728a622, fileName=file0.jpg, ord=0), BoardImage(uuid=7bf52714-e700-4e79-80ae-0ebba9b5fcd0, fileName=file2.jpg, ord=2)]
+2025-03-10 10:28:15 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:28:15 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - 91
+2025-03-10 10:28:15 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - [BoardImage(uuid=b6660115-545c-4064-9f16-e041bc0cbb26, fileName=file2.jpg, ord=2), BoardImage(uuid=35bb82f0-b877-4181-8817-1fe8dfc3f36f, fileName=file0.jpg, ord=0), BoardImage(uuid=e0baf9b2-e746-4cd7-8efa-6cbaff9aba66, fileName=file1.jpg, ord=1)]
+2025-03-10 10:28:15 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - ---------------
+2025-03-10 10:28:15 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 10:28:15 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 10:28:15 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 11:27:00 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 11:27:00 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Starting BoardRepositoryTests using Java 17.0.13 with PID 3124 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 11:27:00 [39m[main][0;39m [36mDEBUG[0;39m k.s.repository.BoardRepositoryTests - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 11:27:00 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 11:27:01 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 11:27:01 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98 ms. Found 4 JPA repository interfaces.
+2025-03-10 11:27:02 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 11:27:03 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 11:27:03 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 11:27:03 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 11:27:03 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 11:27:04 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@129c760d
+2025-03-10 11:27:04 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 11:27:04 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 11:27:04 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 11:27:04 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 11:27:05 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 11:27:05 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 11:27:06 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 11:27:08 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Started BoardRepositoryTests in 9.381 seconds (process running for 11.32)
+2025-03-10 11:27:09 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - 20
+2025-03-10 11:27:09 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - 100
+2025-03-10 11:27:09 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=null, title=null, writer=null, regDate=null, replyCount=null, boardImages=null)
+2025-03-10 11:27:09 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=null, title=null, writer=null, regDate=null, replyCount=null, boardImages=null)
+2025-03-10 11:27:09 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=null, title=null, writer=null, regDate=null, replyCount=null, boardImages=null)
+2025-03-10 11:27:09 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=null, title=null, writer=null, regDate=null, replyCount=null, boardImages=null)
+2025-03-10 11:27:09 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=null, title=null, writer=null, regDate=null, replyCount=null, boardImages=null)
+2025-03-10 11:27:09 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 11:27:09 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 11:27:09 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 11:30:12 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 11:30:12 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Starting BoardRepositoryTests using Java 17.0.13 with PID 7928 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 11:30:12 [39m[main][0;39m [36mDEBUG[0;39m k.s.repository.BoardRepositoryTests - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 11:30:12 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 11:30:14 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 11:30:14 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 4 JPA repository interfaces.
+2025-03-10 11:30:15 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 11:30:15 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 11:30:15 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 11:30:16 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 11:30:16 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 11:30:16 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@391e85df
+2025-03-10 11:30:16 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 11:30:16 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 11:30:16 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 11:30:16 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 11:30:18 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 11:30:18 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 11:30:18 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 11:30:21 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Started BoardRepositoryTests in 8.83 seconds (process running for 10.617)
+2025-03-10 11:30:22 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - 20
+2025-03-10 11:30:22 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - 100
+2025-03-10 11:30:22 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=95, title=타이블...95, writer=user95, regDate=2025-03-10T09:38:49.302180, replyCount=0, boardImages=null)
+2025-03-10 11:30:22 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=94, title=타이블...94, writer=user94, regDate=2025-03-10T09:38:49.279114, replyCount=0, boardImages=null)
+2025-03-10 11:30:22 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=93, title=타이블...93, writer=user93, regDate=2025-03-10T09:38:49.259547, replyCount=0, boardImages=null)
+2025-03-10 11:30:22 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=92, title=타이블...92, writer=user92, regDate=2025-03-10T09:38:49.238980, replyCount=0, boardImages=null)
+2025-03-10 11:30:22 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=91, title=타이블...91, writer=user91, regDate=2025-03-10T09:38:49.221486, replyCount=0, boardImages=null)
+2025-03-10 11:30:22 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 11:30:22 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 11:30:22 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 11:38:07 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 11:38:07 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Starting BoardRepositoryTests using Java 17.0.13 with PID 20184 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 11:38:07 [39m[main][0;39m [36mDEBUG[0;39m k.s.repository.BoardRepositoryTests - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 11:38:07 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 11:38:09 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 11:38:09 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79 ms. Found 4 JPA repository interfaces.
+2025-03-10 11:38:10 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 11:38:10 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 11:38:10 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 11:38:11 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 11:38:11 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 11:38:11 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@234ce7ff
+2025-03-10 11:38:11 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 11:38:11 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 11:38:11 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 11:38:11 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 11:38:13 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 11:38:13 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 11:38:13 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 11:38:16 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Started BoardRepositoryTests in 8.771 seconds (process running for 10.56)
+2025-03-10 11:38:16 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - 20
+2025-03-10 11:38:16 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - 100
+2025-03-10 11:38:16 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=100, title=타이블...100, writer=user100, regDate=2025-03-10T09:38:49.391931, replyCount=0, boardImages=null)
+2025-03-10 11:38:16 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=99, title=타이블...99, writer=user99, regDate=2025-03-10T09:38:49.374859, replyCount=0, boardImages=null)
+2025-03-10 11:38:16 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=98, title=타이블...98, writer=user98, regDate=2025-03-10T09:38:49.358871, replyCount=0, boardImages=null)
+2025-03-10 11:38:16 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=97, title=타이블...97, writer=user97, regDate=2025-03-10T09:38:49.339257, replyCount=0, boardImages=null)
+2025-03-10 11:38:16 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=96, title=타이블...96, writer=user96, regDate=2025-03-10T09:38:49.316181, replyCount=0, boardImages=null)
+2025-03-10 11:38:17 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 11:38:17 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 11:38:17 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 11:39:06 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 11:39:06 [34m[main][0;39m [36mINFO [0;39m k.s.repository.ReplyRepositoryTests - Starting ReplyRepositoryTests using Java 17.0.13 with PID 13972 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 11:39:06 [39m[main][0;39m [36mDEBUG[0;39m k.s.repository.ReplyRepositoryTests - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 11:39:06 [34m[main][0;39m [36mINFO [0;39m k.s.repository.ReplyRepositoryTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 11:39:07 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 11:39:08 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 4 JPA repository interfaces.
+2025-03-10 11:39:09 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 11:39:09 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 11:39:09 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 11:39:09 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 11:39:09 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 11:39:10 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f2a3b37
+2025-03-10 11:39:10 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 11:39:10 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 11:39:10 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 11:39:10 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 11:39:11 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 11:39:12 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 11:39:12 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 11:39:14 [34m[main][0;39m [36mINFO [0;39m k.s.repository.ReplyRepositoryTests - Started ReplyRepositoryTests in 8.604 seconds (process running for 10.388)
+2025-03-10 11:39:15 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 11:39:15 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 11:39:15 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 11:39:26 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 11:39:26 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Starting BoardRepositoryTests using Java 17.0.13 with PID 18904 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 11:39:26 [39m[main][0;39m [36mDEBUG[0;39m k.s.repository.BoardRepositoryTests - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 11:39:26 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 11:39:27 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 11:39:27 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 90 ms. Found 4 JPA repository interfaces.
+2025-03-10 11:39:28 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 11:39:28 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 11:39:28 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 11:39:29 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 11:39:29 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 11:39:29 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7bdb4d69
+2025-03-10 11:39:29 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 11:39:29 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 11:39:29 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 11:39:29 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 11:39:31 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 11:39:31 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 11:39:31 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 11:39:34 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Started BoardRepositoryTests in 8.732 seconds (process running for 10.555)
+2025-03-10 11:39:35 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - 20
+2025-03-10 11:39:35 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - 100
+2025-03-10 11:39:35 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=100, title=타이블...100, writer=user100, regDate=2025-03-10T09:38:49.391931, replyCount=10, boardImages=null)
+2025-03-10 11:39:35 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=99, title=타이블...99, writer=user99, regDate=2025-03-10T09:38:49.374859, replyCount=0, boardImages=null)
+2025-03-10 11:39:35 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=98, title=타이블...98, writer=user98, regDate=2025-03-10T09:38:49.358871, replyCount=0, boardImages=null)
+2025-03-10 11:39:35 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=97, title=타이블...97, writer=user97, regDate=2025-03-10T09:38:49.339257, replyCount=0, boardImages=null)
+2025-03-10 11:39:35 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=96, title=타이블...96, writer=user96, regDate=2025-03-10T09:38:49.316181, replyCount=0, boardImages=null)
+2025-03-10 11:39:35 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 11:39:35 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 11:39:35 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 12:03:42 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 12:03:42 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Starting BoardRepositoryTests using Java 17.0.13 with PID 13512 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 12:03:42 [39m[main][0;39m [36mDEBUG[0;39m k.s.repository.BoardRepositoryTests - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 12:03:42 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 12:03:43 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 12:03:43 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 4 JPA repository interfaces.
+2025-03-10 12:03:44 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 12:03:44 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 12:03:44 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 12:03:45 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 12:03:45 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 12:03:45 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@48c3a0ef
+2025-03-10 12:03:45 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 12:03:45 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 12:03:45 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 12:03:45 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 12:03:47 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 12:03:47 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 12:03:47 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 12:03:50 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Started BoardRepositoryTests in 8.551 seconds (process running for 10.422)
+2025-03-10 12:03:51 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - select board
+from Board board
+  left join Reply reply with reply.board = board
+group by board
+order by board.bno desc
+2025-03-10 12:03:51 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - 20
+2025-03-10 12:03:51 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - 100
+2025-03-10 12:03:51 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=100, title=타이블...100, writer=user100, regDate=2025-03-10T09:38:49.391931, replyCount=10, boardImages=null)
+2025-03-10 12:03:51 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=99, title=타이블...99, writer=user99, regDate=2025-03-10T09:38:49.374859, replyCount=0, boardImages=null)
+2025-03-10 12:03:51 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=98, title=타이블...98, writer=user98, regDate=2025-03-10T09:38:49.358871, replyCount=0, boardImages=null)
+2025-03-10 12:03:51 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=97, title=타이블...97, writer=user97, regDate=2025-03-10T09:38:49.339257, replyCount=0, boardImages=null)
+2025-03-10 12:03:51 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=96, title=타이블...96, writer=user96, regDate=2025-03-10T09:38:49.316181, replyCount=0, boardImages=null)
+2025-03-10 12:03:51 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 12:03:51 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 12:03:51 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 12:13:22 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 12:13:22 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Starting BoardRepositoryTests using Java 17.0.13 with PID 12744 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 12:13:22 [39m[main][0;39m [36mDEBUG[0;39m k.s.repository.BoardRepositoryTests - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 12:13:22 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 12:13:23 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 12:13:23 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 4 JPA repository interfaces.
+2025-03-10 12:13:25 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 12:13:25 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 12:13:25 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 12:13:25 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 12:13:25 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 12:13:26 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a20da9f
+2025-03-10 12:13:26 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 12:13:26 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 12:13:26 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 12:13:26 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 12:13:27 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 12:13:27 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 12:13:28 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 12:13:30 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Started BoardRepositoryTests in 8.85 seconds (process running for 10.712)
+2025-03-10 12:13:31 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - select board
+from Board board
+  left join Reply reply with reply.board = board
+group by board
+order by board.bno desc
+2025-03-10 12:13:32 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - 20
+2025-03-10 12:13:32 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - 100
+2025-03-10 12:13:32 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=100, title=타이블...100, writer=user100, regDate=2025-03-10T09:38:49.391931, replyCount=10, boardImages=null)
+2025-03-10 12:13:32 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=99, title=타이블...99, writer=user99, regDate=2025-03-10T09:38:49.374859, replyCount=0, boardImages=null)
+2025-03-10 12:13:32 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=98, title=타이블...98, writer=user98, regDate=2025-03-10T09:38:49.358871, replyCount=0, boardImages=null)
+2025-03-10 12:13:32 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=97, title=타이블...97, writer=user97, regDate=2025-03-10T09:38:49.339257, replyCount=0, boardImages=null)
+2025-03-10 12:13:32 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=96, title=타이블...96, writer=user96, regDate=2025-03-10T09:38:49.316181, replyCount=0, boardImages=null)
+2025-03-10 12:13:32 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 12:13:32 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 12:13:32 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 12:34:54 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 12:34:54 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Starting BoardRepositoryTests using Java 17.0.13 with PID 12264 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 12:34:54 [39m[main][0;39m [36mDEBUG[0;39m k.s.repository.BoardRepositoryTests - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 12:34:54 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 12:34:56 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 12:34:56 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 78 ms. Found 4 JPA repository interfaces.
+2025-03-10 12:34:57 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 12:34:57 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 12:34:57 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 12:34:58 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 12:34:58 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 12:34:58 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@48c3a0ef
+2025-03-10 12:34:58 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 12:34:58 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 12:34:58 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 12:34:58 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 12:35:00 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 12:35:00 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 12:35:00 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 12:35:03 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - Started BoardRepositoryTests in 8.762 seconds (process running for 10.758)
+2025-03-10 12:35:03 [34m[main][0;39m [36mINFO [0;39m k.s.r.search.BoardSearchImpl - select board
+from Board board
+  left join Reply reply with reply.board = board
+group by board
+order by board.bno desc
+2025-03-10 12:35:04 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - 20
+2025-03-10 12:35:04 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - 100
+2025-03-10 12:35:04 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=100, title=타이블...100, writer=user100, regDate=2025-03-10T09:38:49.391931, replyCount=10, boardImages=[])
+2025-03-10 12:35:04 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=99, title=타이블...99, writer=user99, regDate=2025-03-10T09:38:49.374859, replyCount=0, boardImages=[BoardImageDTO(uuid=b4541bc3-76b1-473b-a6bf-37f67eec61c0, fileName=file0.jpg, ord=0), BoardImageDTO(uuid=57df4bf7-258f-4c48-a10b-cbb554b54ab9, fileName=file1.jpg, ord=1), BoardImageDTO(uuid=006b3a36-a731-4cc5-8ed6-5d3664502234, fileName=file2.jpg, ord=2)])
+2025-03-10 12:35:04 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=98, title=타이블...98, writer=user98, regDate=2025-03-10T09:38:49.358871, replyCount=0, boardImages=[BoardImageDTO(uuid=ac367bcc-6077-4c3f-890e-4283f86cedea, fileName=file0.jpg, ord=0), BoardImageDTO(uuid=9a6a51a0-8d49-4e1c-84e2-470d4f901b7b, fileName=file1.jpg, ord=1), BoardImageDTO(uuid=0b091348-f090-4337-8005-5ec0564d4144, fileName=file2.jpg, ord=2)])
+2025-03-10 12:35:04 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=97, title=타이블...97, writer=user97, regDate=2025-03-10T09:38:49.339257, replyCount=0, boardImages=[BoardImageDTO(uuid=fcfeeba1-c7f5-4348-9b3a-281444852d41, fileName=file0.jpg, ord=0), BoardImageDTO(uuid=e84270c4-ac18-4827-bf84-7f1c9c52df7d, fileName=file1.jpg, ord=1), BoardImageDTO(uuid=c52eb823-77d5-41cd-b1d5-74b4bdd666be, fileName=file2.jpg, ord=2)])
+2025-03-10 12:35:04 [34m[main][0;39m [36mINFO [0;39m k.s.repository.BoardRepositoryTests - BoardListAllDTO(bno=96, title=타이블...96, writer=user96, regDate=2025-03-10T09:38:49.316181, replyCount=0, boardImages=[BoardImageDTO(uuid=28ca62f3-2b3c-416a-990e-353701bb008d, fileName=file0.jpg, ord=0), BoardImageDTO(uuid=e8091c51-c23f-469e-aefd-41f238aa3dd0, fileName=file1.jpg, ord=1), BoardImageDTO(uuid=e68389a3-487c-459d-9351-02de45091ca1, fileName=file2.jpg, ord=2)])
+2025-03-10 12:35:04 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 12:35:04 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 12:35:04 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 14:33:27 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 14:33:27 [34m[main][0;39m [36mINFO [0;39m k.spring.service.BoardServiceTest - Starting BoardServiceTest using Java 17.0.13 with PID 20288 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 14:33:27 [39m[main][0;39m [36mDEBUG[0;39m k.spring.service.BoardServiceTest - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 14:33:27 [34m[main][0;39m [36mINFO [0;39m k.spring.service.BoardServiceTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 14:33:28 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 14:33:28 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98 ms. Found 4 JPA repository interfaces.
+2025-03-10 14:33:30 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 14:33:30 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 14:33:30 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 14:33:30 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 14:33:30 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 14:33:31 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6949cead
+2025-03-10 14:33:31 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 14:33:31 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 14:33:31 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 14:33:31 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 14:33:33 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 14:33:33 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 14:33:33 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 14:33:36 [34m[main][0;39m [36mINFO [0;39m k.spring.service.BoardServiceTest - Started BoardServiceTest in 9.743 seconds (process running for 11.806)
+2025-03-10 14:33:37 [34m[main][0;39m [36mINFO [0;39m k.spring.service.BoardServiceTest - kroryi.spring.service.BoardServiceImpl
+2025-03-10 14:33:37 [34m[main][0;39m [36mINFO [0;39m k.spring.service.BoardServiceTest - bno: 101 등록성공
+2025-03-10 14:33:37 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 14:33:37 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 14:33:37 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 14:49:20 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 14:49:20 [34m[main][0;39m [36mINFO [0;39m k.spring.service.BoardServiceTest - Starting BoardServiceTest using Java 17.0.13 with PID 524 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 14:49:20 [39m[main][0;39m [36mDEBUG[0;39m k.spring.service.BoardServiceTest - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 14:49:20 [34m[main][0;39m [36mINFO [0;39m k.spring.service.BoardServiceTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 14:49:21 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 14:49:21 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 4 JPA repository interfaces.
+2025-03-10 14:49:22 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 14:49:23 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 14:49:23 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 14:49:23 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 14:49:23 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 14:49:23 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4fbc516f
+2025-03-10 14:49:23 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 14:49:23 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 14:49:23 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 14:49:23 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 14:49:25 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 14:49:25 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 14:49:25 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 14:49:28 [34m[main][0;39m [36mINFO [0;39m k.spring.service.BoardServiceTest - Started BoardServiceTest in 8.494 seconds (process running for 10.329)
+2025-03-10 14:49:29 [34m[main][0;39m [36mINFO [0;39m k.spring.service.BoardServiceTest - BoardDTO(bno=101, title=title---image with, content=content---image with, writer=writer--image with, regDate=2025-03-10T14:33:37.139270, modDate=2025-03-10T14:33:37.139270, fileNames=[ca937e6c-3a0b-4bba-86bf-5014f58dd9f2_aaa.jpg, cd7c021d-4d74-4816-bdd3-bba44dcf38c9_bbb.jpg, 3cc3cc8d-6179-42a1-96a3-3ef6be95f590_ccc.jpg])
+2025-03-10 14:49:29 [34m[main][0;39m [36mINFO [0;39m k.spring.service.BoardServiceTest - ca937e6c-3a0b-4bba-86bf-5014f58dd9f2_aaa.jpg
+2025-03-10 14:49:29 [34m[main][0;39m [36mINFO [0;39m k.spring.service.BoardServiceTest - cd7c021d-4d74-4816-bdd3-bba44dcf38c9_bbb.jpg
+2025-03-10 14:49:29 [34m[main][0;39m [36mINFO [0;39m k.spring.service.BoardServiceTest - 3cc3cc8d-6179-42a1-96a3-3ef6be95f590_ccc.jpg
+2025-03-10 14:49:29 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 14:49:29 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 14:49:29 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 15:10:25 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 15:10:25 [34m[main][0;39m [36mINFO [0;39m k.spring.service.BoardServiceTest - Starting BoardServiceTest using Java 17.0.13 with PID 18408 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 15:10:25 [39m[main][0;39m [36mDEBUG[0;39m k.spring.service.BoardServiceTest - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 15:10:25 [34m[main][0;39m [36mINFO [0;39m k.spring.service.BoardServiceTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 15:10:26 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 15:10:26 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 4 JPA repository interfaces.
+2025-03-10 15:10:28 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 15:10:28 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 15:10:28 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 15:10:28 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 15:10:28 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 15:10:29 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@391e85df
+2025-03-10 15:10:29 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 15:10:29 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 15:10:29 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 15:10:29 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 15:10:30 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 15:10:30 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 15:10:31 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 15:10:33 [34m[main][0;39m [36mINFO [0;39m k.spring.service.BoardServiceTest - Started BoardServiceTest in 8.812 seconds (process running for 10.714)
+2025-03-10 15:10:34 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 15:10:34 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 15:10:34 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 15:12:37 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 15:12:37 [34m[main][0;39m [36mINFO [0;39m k.spring.service.BoardServiceTest - Starting BoardServiceTest using Java 17.0.13 with PID 19172 (started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 15:12:37 [39m[main][0;39m [36mDEBUG[0;39m k.spring.service.BoardServiceTest - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 15:12:37 [34m[main][0;39m [36mINFO [0;39m k.spring.service.BoardServiceTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 15:12:39 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 15:12:39 [34m[main][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 103 ms. Found 4 JPA repository interfaces.
+2025-03-10 15:12:40 [34m[main][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 15:12:40 [34m[main][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 15:12:41 [34m[main][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 15:12:41 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 15:12:41 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 15:12:41 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ed12d10
+2025-03-10 15:12:41 [34m[main][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 15:12:42 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 15:12:42 [31m[main][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 15:12:42 [34m[main][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 15:12:43 [34m[main][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 15:12:43 [34m[main][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 15:12:44 [34m[main][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 15:12:46 [34m[main][0;39m [36mINFO [0;39m k.spring.service.BoardServiceTest - Started BoardServiceTest in 9.586 seconds (process running for 11.527)
+2025-03-10 15:12:47 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 15:12:47 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 15:12:47 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 15:21:02 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 15:21:03 [34m[restartedMain][0;39m [36mINFO [0;39m kroryi.spring.Spring303Application - Starting Spring303Application using Java 17.0.13 with PID 20016 (C:\Users\edu\IdeaProjects\spring3_03\target\classes started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 15:21:03 [39m[restartedMain][0;39m [36mDEBUG[0;39m kroryi.spring.Spring303Application - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 15:21:03 [34m[restartedMain][0;39m [36mINFO [0;39m kroryi.spring.Spring303Application - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 15:21:03 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-10 15:21:03 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-10 15:21:04 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 15:21:04 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 52 ms. Found 4 JPA repository interfaces.
+2025-03-10 15:21:05 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-03-10 15:21:05 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-10 15:21:05 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-10 15:21:05 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-10 15:21:05 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-10 15:21:05 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2149 ms
+2025-03-10 15:21:05 [34m[restartedMain][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 15:21:05 [34m[restartedMain][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 15:21:05 [34m[restartedMain][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 15:21:06 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 15:21:06 [34m[restartedMain][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 15:21:06 [34m[restartedMain][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2908097f
+2025-03-10 15:21:06 [34m[restartedMain][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 15:21:06 [31m[restartedMain][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 15:21:06 [31m[restartedMain][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 15:21:06 [34m[restartedMain][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 15:21:08 [34m[restartedMain][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 15:21:08 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 15:21:08 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 15:21:10 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-10 15:21:10 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-10 15:21:10 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-03-10 15:21:10 [34m[restartedMain][0;39m [36mINFO [0;39m kroryi.spring.Spring303Application - Started Spring303Application in 8.176 seconds (process running for 9.095)
+2025-03-10 15:21:35 [34m[http-nio-8080-exec-1][0;39m [36mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-10 15:21:35 [34m[http-nio-8080-exec-1][0;39m [36mINFO [0;39m o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-10 15:21:35 [34m[http-nio-8080-exec-1][0;39m [36mINFO [0;39m o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-03-10 15:23:07 [34m[http-nio-8080-exec-6][0;39m [36mINFO [0;39m k.spring.controller.BoardController - ------------register============
+2025-03-10 15:23:07 [34m[http-nio-8080-exec-6][0;39m [36mINFO [0;39m k.spring.controller.BoardController - BoardDTO(bno=null, title=df, content=sdfsdfsdf, writer=sdfsdf, regDate=null, modDate=null, fileNames=null)
+2025-03-10 15:54:48 [34m[File Watcher][0;39m [36mINFO [0;39m o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 62 class path changes (0 additions, 60 deletions, 2 modifications)
+2025-03-10 15:54:48 [34m[Thread-5][0;39m [36mINFO [0;39m o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-10 15:54:48 [34m[tomcat-shutdown][0;39m [36mINFO [0;39m o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-03-10 15:54:48 [34m[tomcat-shutdown][0;39m [36mINFO [0;39m o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-03-10 15:54:48 [34m[Thread-5][0;39m [36mINFO [0;39m o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-03-10 15:54:48 [34m[Thread-5][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 15:54:48 [34m[Thread-5][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 15:54:48 [34m[Thread-5][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-10 15:54:48 [34m[restartedMain][0;39m [36mINFO [0;39m kroryi.spring.Spring303Application - Starting Spring303Application using Java 17.0.13 with PID 20016 (C:\Users\edu\IdeaProjects\spring3_03\target\classes started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 15:54:48 [39m[restartedMain][0;39m [36mDEBUG[0;39m kroryi.spring.Spring303Application - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 15:54:48 [34m[restartedMain][0;39m [36mINFO [0;39m kroryi.spring.Spring303Application - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 15:54:48 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 15:54:48 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2025-03-10 15:54:49 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-03-10 15:54:49 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-10 15:54:49 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-10 15:54:49 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-10 15:54:49 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-10 15:54:49 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 768 ms
+2025-03-10 15:54:49 [34m[restartedMain][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 15:54:49 [34m[restartedMain][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 15:54:49 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 15:54:49 [34m[restartedMain][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-03-10 15:54:49 [34m[restartedMain][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3138c17c
+2025-03-10 15:54:49 [34m[restartedMain][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-03-10 15:54:49 [31m[restartedMain][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 15:54:49 [31m[restartedMain][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 15:54:49 [34m[restartedMain][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 15:54:49 [34m[restartedMain][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 15:54:49 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 15:54:49 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-10 15:54:49 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-10 15:54:49 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-03-10 15:54:49 [34m[restartedMain][0;39m [36mINFO [0;39m kroryi.spring.Spring303Application - Started Spring303Application in 1.459 seconds (process running for 2028.464)
+2025-03-10 15:54:49 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   WebMvcAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration#formContentFilter matched:
+      - @ConditionalOnProperty (spring.mvc.formcontent.filter.enabled) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.FormContentFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#flashMapManager matched:
+      - @ConditionalOnMissingBean (names: flashMapManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#localeResolver matched:
+      - @ConditionalOnMissingBean (names: localeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#themeResolver matched:
+      - @ConditionalOnMissingBean (names: themeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#viewNameTranslator matched:
+      - @ConditionalOnMissingBean (names: viewNameTranslator; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.ResourceChainCustomizerConfiguration matched:
+      - @ConditionalOnEnabledResourceChain found class org.webjars.WebJarVersionLocator (OnEnabledResourceChainCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#defaultViewResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.InternalResourceViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#requestContextFilter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.context.request.RequestContextListener,org.springframework.web.filter.RequestContextFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#viewResolver matched:
+      - @ConditionalOnBean (types: org.springframework.web.servlet.ViewResolver; SearchStrategy: all) found beans 'defaultViewResolver', 'beanNameViewResolver', 'mvcViewResolver'; @ConditionalOnMissingBean (names: viewResolver types: org.springframework.web.servlet.view.ContentNegotiatingViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   WebMvcAutoConfiguration#hiddenHttpMethodFilter:
+      Did not match:
+         - @ConditionalOnProperty (spring.mvc.hiddenmethod.filter.enabled) did not find property 'enabled' (OnPropertyCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#beanNameViewResolver:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.view.BeanNameViewResolver' beanNameViewResolver (OnBeanCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2025-03-10 15:54:54 [34m[File Watcher][0;39m [36mINFO [0;39m o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 60 class path changes (60 additions, 0 deletions, 0 modifications)
+2025-03-10 15:54:54 [34m[Thread-7][0;39m [36mINFO [0;39m o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-10 15:54:54 [34m[tomcat-shutdown][0;39m [36mINFO [0;39m o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-03-10 15:54:54 [34m[tomcat-shutdown][0;39m [36mINFO [0;39m o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-03-10 15:54:54 [34m[Thread-7][0;39m [36mINFO [0;39m o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-03-10 15:54:54 [34m[Thread-7][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 15:54:54 [34m[Thread-7][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-03-10 15:54:54 [34m[Thread-7][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-03-10 15:54:54 [34m[restartedMain][0;39m [36mINFO [0;39m kroryi.spring.Spring303Application - Starting Spring303Application using Java 17.0.13 with PID 20016 (C:\Users\edu\IdeaProjects\spring3_03\target\classes started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 15:54:54 [39m[restartedMain][0;39m [36mDEBUG[0;39m kroryi.spring.Spring303Application - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 15:54:54 [34m[restartedMain][0;39m [36mINFO [0;39m kroryi.spring.Spring303Application - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 15:54:54 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 15:54:54 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 4 JPA repository interfaces.
+2025-03-10 15:54:55 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-03-10 15:54:55 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-10 15:54:55 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-10 15:54:55 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-10 15:54:55 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-10 15:54:55 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 746 ms
+2025-03-10 15:54:55 [34m[restartedMain][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 15:54:55 [34m[restartedMain][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 15:54:55 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 15:54:55 [34m[restartedMain][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2025-03-10 15:54:55 [34m[restartedMain][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a31b119
+2025-03-10 15:54:55 [34m[restartedMain][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2025-03-10 15:54:55 [31m[restartedMain][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 15:54:55 [31m[restartedMain][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 15:54:55 [34m[restartedMain][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 15:54:55 [34m[restartedMain][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 15:54:55 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 15:54:56 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-10 15:54:56 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-10 15:54:56 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-03-10 15:54:56 [34m[restartedMain][0;39m [36mINFO [0;39m kroryi.spring.Spring303Application - Started Spring303Application in 1.736 seconds (process running for 2034.711)
+2025-03-10 15:54:56 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   WebMvcAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport' org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+         - found 'session' scope (OnWebApplicationCondition)
+
+   WebMvcAutoConfiguration.ResourceChainCustomizerConfiguration:
+      Did not match:
+         - Ancestor org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration did not match (ConditionEvaluationReport.AncestorsMatchedCondition)
+      Matched:
+         - @ConditionalOnEnabledResourceChain found class org.webjars.WebJarVersionLocator (OnEnabledResourceChainCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2025-03-10 16:08:15 [34m[http-nio-8080-exec-1][0;39m [36mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-10 16:08:15 [34m[http-nio-8080-exec-1][0;39m [36mINFO [0;39m o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-10 16:08:15 [34m[http-nio-8080-exec-1][0;39m [36mINFO [0;39m o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-03-10 16:08:34 [34m[http-nio-8080-exec-3][0;39m [36mINFO [0;39m k.spring.controller.UpDownController - UploadFileDTO(files=null)
+2025-03-10 16:08:45 [34m[http-nio-8080-exec-4][0;39m [36mINFO [0;39m k.spring.controller.UpDownController - UploadFileDTO(files=[org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@3a9f33f2])
+2025-03-10 16:08:45 [34m[http-nio-8080-exec-4][0;39m [36mINFO [0;39m k.spring.controller.UpDownController - computer-icons-ninja-favicon-iconfinder-avatar-png-favpng-Jku9r1TGGY4Ha6BLUXz1eL3DQ.jpg
+2025-03-10 16:08:45 [34m[http-nio-8080-exec-4][0;39m [36mINFO [0;39m k.spring.controller.UpDownController - d:\upload\55ba872d-9e9e-4799-ae42-18951462175f_computer-icons-ninja-favicon-iconfinder-avatar-png-favpng-Jku9r1TGGY4Ha6BLUXz1eL3DQ.jpg
+2025-03-10 16:09:18 [34m[http-nio-8080-exec-6][0;39m [36mINFO [0;39m k.spring.controller.UpDownController - UploadFileDTO(files=[org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@1edc5fe7])
+2025-03-10 16:09:18 [34m[http-nio-8080-exec-6][0;39m [36mINFO [0;39m k.spring.controller.UpDownController - premium_photo-1667126445804-79202e10a28a.jpg
+2025-03-10 16:09:18 [34m[http-nio-8080-exec-6][0;39m [36mINFO [0;39m k.spring.controller.UpDownController - d:\upload\3dc466ac-16e4-4270-a453-4d83397b6e97_premium_photo-1667126445804-79202e10a28a.jpg
+2025-03-10 16:46:48 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-10 16:46:48 [34m[tomcat-shutdown][0;39m [36mINFO [0;39m o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-03-10 16:46:48 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 16:46:48 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-03-10 16:46:48 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-03-10 16:46:52 [34m[background-preinit][0;39m [36mINFO [0;39m o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-03-10 16:46:52 [34m[restartedMain][0;39m [36mINFO [0;39m kroryi.spring.Spring303Application - Starting Spring303Application using Java 17.0.13 with PID 10032 (C:\Users\edu\IdeaProjects\spring3_03\target\classes started by edu in C:\Users\edu\IdeaProjects\spring3_03)
+2025-03-10 16:46:52 [39m[restartedMain][0;39m [36mDEBUG[0;39m kroryi.spring.Spring303Application - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-10 16:46:52 [34m[restartedMain][0;39m [36mINFO [0;39m kroryi.spring.Spring303Application - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 16:46:52 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-10 16:46:52 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-10 16:46:53 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 16:46:53 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 4 JPA repository interfaces.
+2025-03-10 16:46:54 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-03-10 16:46:54 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-10 16:46:54 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-10 16:46:54 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-10 16:46:54 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-10 16:46:54 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2135 ms
+2025-03-10 16:46:54 [34m[restartedMain][0;39m [36mINFO [0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 16:46:54 [34m[restartedMain][0;39m [36mINFO [0;39m org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 16:46:54 [34m[restartedMain][0;39m [36mINFO [0;39m o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 16:46:55 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 16:46:55 [34m[restartedMain][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 16:46:55 [34m[restartedMain][0;39m [36mINFO [0;39m com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e6127bd
+2025-03-10 16:46:55 [34m[restartedMain][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 16:46:55 [31m[restartedMain][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 16:46:55 [31m[restartedMain][0;39m [36mWARN [0;39m org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 16:46:55 [34m[restartedMain][0;39m [36mINFO [0;39m o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 16:46:57 [34m[restartedMain][0;39m [36mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 16:46:57 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 16:46:57 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-10 16:46:59 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-10 16:46:59 [34m[restartedMain][0;39m [36mINFO [0;39m o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-10 16:46:59 [34m[restartedMain][0;39m [36mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-03-10 16:46:59 [34m[restartedMain][0;39m [36mINFO [0;39m kroryi.spring.Spring303Application - Started Spring303Application in 7.723 seconds (process running for 9.061)
+2025-03-10 16:47:07 [34m[http-nio-8080-exec-1][0;39m [36mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-10 16:47:07 [34m[http-nio-8080-exec-1][0;39m [36mINFO [0;39m o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-10 16:47:07 [34m[http-nio-8080-exec-1][0;39m [36mINFO [0;39m o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-03-10 16:47:07 [34m[http-nio-8080-exec-1][0;39m [36mINFO [0;39m k.spring.controller.UpDownController - UploadFileDTO(files=[org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@4caf3593])
+2025-03-10 16:47:07 [34m[http-nio-8080-exec-1][0;39m [36mINFO [0;39m k.spring.controller.UpDownController - premium_photo-1667126445804-79202e10a28a.jpg
+2025-03-10 16:47:07 [34m[http-nio-8080-exec-1][0;39m [36mINFO [0;39m k.spring.controller.UpDownController - d:\upload\0715f26c-262c-47ea-9cc1-b4db903e1daa_premium_photo-1667126445804-79202e10a28a.jpg
+2025-03-10 16:47:09 [34m[http-nio-8080-exec-3][0;39m [36mINFO [0;39m k.spring.controller.UpDownController - UploadFileDTO(files=[org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@6f0ebf10])
+2025-03-10 16:47:09 [34m[http-nio-8080-exec-3][0;39m [36mINFO [0;39m k.spring.controller.UpDownController - premium_photo-1667126445804-79202e10a28a.jpg
+2025-03-10 16:47:09 [34m[http-nio-8080-exec-3][0;39m [36mINFO [0;39m k.spring.controller.UpDownController - d:\upload\b4762c3f-8e96-42f1-89b7-0087003811de_premium_photo-1667126445804-79202e10a28a.jpg
+2025-03-10 16:52:58 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-10 16:52:58 [34m[tomcat-shutdown][0;39m [36mINFO [0;39m o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-03-10 16:52:58 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 16:52:58 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-10 16:52:58 [34m[SpringApplicationShutdownHook][0;39m [36mINFO [0;39m com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

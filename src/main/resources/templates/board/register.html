@@ -115,7 +115,7 @@
 
             uploadToServer(formObj).then(result => {
                 console.log(result)
-                uploadModal.hide(0)
+                uploadModal.hide()
             }).catch(e => {
                 console.error(e)
                 uploadModal.hide()
