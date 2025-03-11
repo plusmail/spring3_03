@@ -42,7 +42,7 @@
                                 <a th:href="|@{/board/list}?${link}|" class="text-decoration-none">
                                     <button type="button" class="btn btn-success">목록보기</button>
                                 </a>
-                                <button type="submit" class="btn btn-primary">확인</button>
+                                <button type="submit" class="btn btn-primary submitBtn">확인</button>
                                 <button type="reset" class="btn btn-secondary">리셋</button>
                             </div>
                         </div>
@@ -115,6 +115,9 @@
 
             uploadToServer(formObj).then(result => {
                 console.log(result)
+                for(const uploadResult of result){
+                    showUploadFile(uploadResult)
+                }
                 uploadModal.hide()
             }).catch(e => {
                 console.error(e)
@@ -125,6 +128,54 @@
 
         //버블링 이벤트 실행(자식 -> 부모 방향으로 전파
         //캡처링 이벤트 실행(부모 -> 자식으로 전파
+        const uploadResult = document.querySelector(".uploadResult");
+
+        function showUploadFile({uuid, fileName, link}){
+            const str =`
+            <div class="card col-4">
+                <div class="card-header d-flex justify-content-center">
+                    ${fileName}
+                    <button type="button" class="btn-close btn-danger"
+                    onclick="removeFile('${uuid}','${fileName}',this)"></button>
+                </div>
+                <div class="card-body">
+                    <img src="/view/${link}" data-src="${uuid + "_" + fileName}" width="200px">
+                </div>
+            </div>
+            `
+            uploadResult.innerHTML += str;
+
+        }
+
+        function removeFile(uuid,fileName,obj){
+            console.log(uuid)
+            console.log(fileName)
+            const targetDiv = obj.closest(".card")
+            removeFileToServer(uuid,fileName).then(data =>{
+                targetDiv.remove()
+            })
+        }
+
+        const submitBtn = document.querySelector(".submitBtn");
+        submitBtn.addEventListener("click", (e)=>{
+            console.log("11111111")
+            e.preventDefault()
+            e.stopPropagation()
+            const target = document.querySelector(".uploadHidden")
+
+            const uploadFiles = uploadResult.querySelectorAll("img")
+
+            let str =''
+            for(let i=0; i < uploadFiles.length; i++){
+                const uploadFile = uploadFiles[i]
+                const imgLink = uploadFile.getAttribute("data-src")
+                str +=`<input type='hidden' name='fileNames' value="${imgLink}">`
+            }
+
+            target.innerHTML = str;
+            document.querySelector("form").submit()
+
+        },false)
 
     </script>
 </div>

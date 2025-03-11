@@ -38,9 +38,10 @@
         <li class="list-group-item active d-flex justify-content-between">
             <span class="col-1">번호</span>
             <span class="col-4">제목</span>
+            <span class="col-2">이미지</span>
             <span class="col-2">작성자</span>
             <span class="col-2">작성일</span>
-<!--            <span class="col-2">수정일</span>-->
+            <!--            <span class="col-2">수정일</span>-->
         </li>
 
         <th:block th:each="dto : ${resDTO.dtoList}">
@@ -51,13 +52,20 @@
                     <a th:href="|@{/board/read/{bno}(bno=${dto.bno})}?${reqDTO.getLink()}|"
                        th:text="${dto.title}"
                        class="text-decoration-none"></a>
+
                     <span class="badge bg-primary rounded-pill" style="background-color: #0a53be">
                         [[${dto.replyCount}]]
                     </span>
+                    <span th:if="${dto.boardImages != null && dto.boardImages.size() >0}">
+                        <img style="width:80px" th:each="boardImage: ${dto.boardImages}"
+                             th:src="|/view/s_${boardImage.uuid}_${boardImage.fileName}|">
+                    </span>
+
                 </span>
                 <span class="col-2" th:text="${dto.writer}"></span>
                 <span class="col-2" th:text="${#temporals.format(dto.regDate, 'yyyy-MM-dd')}"></span>
                 <!--                <span class="col-2" th:text="${#temporals.format(dto.modDate, 'yyyy-MM-dd')}"></span>-->
+
             </li>
         </th:block>
     </ul>

@@ -50,6 +50,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="col">
+                    <div class="card" th:if="${dto.fileNames !=null && dto.fileNames.size() >0}">
+                        <img th:each="fileName : ${dto.fileNames}"
+                             th:src="|/view/${fileName}|" alt="" class="card-img-top">
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -292,6 +299,11 @@
 
     function printPages(data) {
         let pageStr = '';
+
+        if (data.total === 0) {
+            replyPaging.innerHTML = `<p class="text-center text-muted">댓글이 없습니다.</p>`;
+            return;
+        }
 
         if (data.prev) {
             pageStr += `<li class="page-item">

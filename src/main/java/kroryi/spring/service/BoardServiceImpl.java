@@ -1,17 +1,21 @@
 package kroryi.spring.service;
 
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.OneToMany;
 import kroryi.spring.dto.*;
 import kroryi.spring.entity.Board;
 import kroryi.spring.repository.BoardRepository;
+import kroryi.spring.repository.ReplyRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.Optional;
-
-
 
 
 import java.util.List;
@@ -21,6 +25,9 @@ import java.util.stream.Collectors;
 public class BoardServiceImpl implements BoardService {
     @Autowired
     private BoardRepository boardRepository;
+
+    @Autowired
+    private ReplyRepository replyRepository;
 
     @Autowired
     private ModelMapper modelMapper;
@@ -70,8 +77,8 @@ public class BoardServiceImpl implements BoardService {
         board.change(dto.getTitle(), dto.getContent());
 
         board.clearImages();
-        if(dto.getFileNames() != null) {
-            for(String fileName : dto.getFileNames()) {
+        if (dto.getFileNames() != null) {
+            for (String fileName : dto.getFileNames()) {
                 String[] arr = fileName.split("_");
                 // arr[0]는 uuid, arr[1] aaa.jpg(파일명)
                 board.addImage(arr[0], arr[1]);
@@ -82,7 +89,15 @@ public class BoardServiceImpl implements BoardService {
 
     }
 
+    @Transactional
     public void remove(Long id) {
+
+//        @OneToMany(mappedBy = "board",
+//                cascade = CascadeType.REMOVE,
+//                fetch = FetchType.LAZY,
+//                orphanRemoval = true)
+//        사용 않하면  수동으로 replyRepository.deleteByBoard_Bno(id);
+//        replyRepository.deleteByBoard_Bno(id);
         boardRepository.deleteById(id);
     }
 
@@ -116,7 +131,7 @@ public class BoardServiceImpl implements BoardService {
         return PageResponseDTO.<BoardListAllDTO>withAll()
                 .pageRequestDTO(pageRequestDTO)
                 .dtoList(result.getContent())
-                .total((int)result.getTotalElements())
+                .total((int) result.getTotalElements())
                 .build();
     }
 }

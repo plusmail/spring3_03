@@ -43,7 +43,15 @@ public class Board extends BaseEntity {
     // ~~~ where board_image.board_bno in (?,?,?,?,?)
     private Set<BoardImage> imageSet = new HashSet<>();
 
-    public void change(String title, String content){
+
+    @OneToMany(mappedBy = "board",
+            cascade = CascadeType.REMOVE,
+            fetch = FetchType.LAZY,
+            orphanRemoval = true)
+    private Set<Reply> replySet = new HashSet<>();
+
+
+    public void change(String title, String content) {
         this.title = title;
         this.content = content;
     }
