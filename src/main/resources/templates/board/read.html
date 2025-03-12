@@ -39,12 +39,14 @@
                                th:value="${#temporals.format(dto.modDate, 'yyyy-MM-dd')}" readonly>
                     </div>
 
-                    <div class="my-4">
+                    <div class="my-4" th:with="user = ${#authentication.principal}">
                         <div class="float-end" th:with="link = ${reqDTO.getLink()}">
                             <a th:href="|@{/board/list}?${link}|" class="text-decoration-none">
                                 <button type="button" class="btn btn-success">목록보기</button>
                             </a>
-                            <a th:href="|@{'/board/modify/'+ ${dto.bno}(${link})}|" class="text-decoration-none">
+                            <a th:href="|@{'/board/modify/'+ ${dto.bno}(${link})}|"
+                               th:if="${user != null && user.username == dto.writer}"
+                               class="text-decoration-none">
                                 <button type="button" class="btn btn-primary">수정하기</button>
                             </a>
                         </div>
@@ -95,9 +97,11 @@
                         <span class="input-group-text">댓글 내용</span>
                         <input type="text" class="form-control replyText">
                     </div>
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3" th:with="user = ${#authentication.principal}">
                         <span class="input-group-text">작성자</span>
-                        <input type="text" class="form-control replier">
+                        <input type="text" class="form-control replier"
+                               th:value="${user.username}" readonly
+                        >
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -123,6 +127,7 @@
                     <div class="input-group mb-3">
                         <span class="input-group-text">내용</span>
                         <input type="text" class="form-control modifyText">
+                        <input type="hidden" class="modifyReplies">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -141,6 +146,9 @@
 </div>
 
 <script layout:fragment="script" th:inline="javascript">
+
+    const currentUser = [[${#authentication.principal.username}]]
+    let hasAuth = false
 
     const bno = [[${dto.bno}]]
     const replyList = document.querySelector(".replyList")
@@ -179,7 +187,7 @@
             console.log(result.rno)
             registerModal.hide()
             replyText.value = ''
-            replier.value = ''
+            // replier.value = ''
             printReplies(1, this.size, true, false)
 
         }).catch(e => {
@@ -193,6 +201,7 @@
     const modifyModal = new bootstrap.Modal(document.querySelector(".modifyModal"))
     const replyHeader = document.querySelector(".replyHeader")
     const modifyText = document.querySelector(".modifyText")
+    const modifyReplies = document.querySelector(".modifyReplies")
     const modifyBtn = document.querySelector(".modifyBtn")
     const removeBtn = document.querySelector(".removeBtn")
     const closeModifyBtn = document.querySelector(".closeModifyBtn")
@@ -201,6 +210,7 @@
     replyList.addEventListener("click", (e) => {
         e.preventDefault()
         e.stopPropagation()
+
 
         const target = e.target
         if (!target || target.tagName != 'SPAN') {
@@ -216,18 +226,35 @@
             console.log(reply)
             replyHeader.innerHTML = reply.rno;
             modifyText.value = reply.replyText
+            modifyReplies.value = reply.replier
             modifyModal.show()
+
+            hasAuth = currentUser === reply.replier
+
+            // if(!hasAuth){
+            //     alert("댓글 작성자만 수정,삭제가 가능합니다.")
+            //     modifyModal.hide()
+            // }
+
         }).catch(e => {
             console.log("error발생")
         })
     })
 
     modifyBtn.addEventListener("click", e => {
+
+        if(!hasAuth){
+            alert("댓글 작성자만 수정이 가능합니다.")
+            modifyModal.hide()
+            return
+        }
+
         // bno, rno, replyText 이것은 ReplyDTO 와 일치
         const replyObj = {
             bno: bno,
             rno: replyHeader.innerHTML,
-            replyText: modifyText.value
+            replyText: modifyText.value,
+            replier: modifyReplies.value
         }
         modifyReply(replyObj).then(result => {
             console.log(result.rno + "수정 완료")
@@ -246,7 +273,20 @@
 
 
     removeBtn.addEventListener("click", e => {
-        removeReply(replyHeader.innerHTML).then(result => {
+
+        // if(!hasAuth){
+        //     alert("댓글 작성자만  삭제가 가능합니다.")
+        //     modifyModal.hide()
+        //     return
+        // }
+
+        const replyObj = {
+            bno: bno,
+            rno: replyHeader.innerHTML,
+            replyText: modifyText.value,
+            replier: modifyReplies.value
+        }
+        removeReply(replyObj).then(result => {
             console.log(result.rno + " 를 삭제 했습니다.")
             replyText.value = ''
             modifyModal.hide()
@@ -332,8 +372,8 @@
     function printReplies(page, size, goLast, goFirst) {
         this.page = page
         this.size = size
-        console.log("aaaa "+ this.page)
-        console.log("aaaab "+ this.size)
+        console.log("aaaa " + this.page)
+        console.log("aaaab " + this.size)
         getList({bno, page, size, goLast, goFirst}).then(
             data => {
                 console.log(data)
