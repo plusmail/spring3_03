@@ -372,8 +372,6 @@
     function printReplies(page, size, goLast, goFirst) {
         this.page = page
         this.size = size
-        console.log("aaaa " + this.page)
-        console.log("aaaab " + this.size)
         getList({bno, page, size, goLast, goFirst}).then(
             data => {
                 console.log(data)
