@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{layout/layout.html}"
+      lang="ko">
+
+
+<div layout:fragment="content">
+
+<div>
+    <div>
+        <div>
+            <div><h1>회원가입</h1></div>
+        </div>
+        <div>
+            <form action="/member/join" method="post">
+                <div>
+                    <span>아이디:</span>
+                    <input type="text" name="mid">
+                </div>
+                <div>
+                    <span>비밀번호:</span>
+                    <input type="password" name="mpw">
+                </div>
+                <div>
+                    <span>비밀번호(재):</span>
+                    <input type="password" name="re_mpw">
+                </div>
+                <div>
+                    <span>EMAIL:</span>
+                    <input type="email" name="email">
+                </div>
+                <div>
+                    <div>
+                        <button type="submit" class="submitBtn">가입</button>
+                        <button type="reset" class="">취소</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<script layout:fragment="script" th:inline="javascript">
+
+        const error = [[${error}]]
+        if(error && (error === 'mid')){
+            alert("동일한 아이디가 존재 합니다.\n 다른 아이디를 사용하세요")
+        }
+
+</script>

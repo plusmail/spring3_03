@@ -5,16 +5,15 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.client.OAuth2AuthorizedClientProvider;
+import org.springframework.security.oauth2.client.OAuth2AuthorizedClientProviderBuilder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
@@ -41,17 +40,17 @@ public class CustomSecurityConfig {
         return repo;
     }
 
-    @Bean
-    public UserDetailsService userDetailsService(PasswordEncoder passwordEncoder) {
-        return username -> {
-            log.info("로딩 Username: {}", username);
-            return User.builder()
-                    .username(username)
-                    .password(passwordEncoder.encode("1111")) // ✅ 반드시 암호화된 비밀번호 사용
-                    .authorities("ROLE_USER")
-                    .build();
-        };
-    }
+//    @Bean
+//    public UserDetailsService userDetailsService(PasswordEncoder passwordEncoder) {
+//        return username -> {
+//            log.info("로딩 Username: {}", username);
+//            return User.builder()
+//                    .username(username)
+//                    .password(passwordEncoder.encode("1111")) // ✅ 반드시 암호화된 비밀번호 사용
+//                    .authorities("ROLE_USER")
+//                    .build();
+//        };
+//    }
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http, UserDetailsService userDetailsService) throws Exception {
@@ -62,6 +61,8 @@ public class CustomSecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/").permitAll()
                         .requestMatchers("/login").permitAll()
+                        .requestMatchers("/login/oauth2/code/kakao").permitAll()
+                        .requestMatchers("/member/join").permitAll()
                         .requestMatchers("/board/list").permitAll()
                         .requestMatchers("/admin").hasRole("ADMIN")
                         .anyRequest().authenticated()
@@ -80,6 +81,7 @@ public class CustomSecurityConfig {
                         .userDetailsService(userDetailsService)
                         .tokenValiditySeconds(60 * 60 * 24 * 30)
                 )
+                .oauth2Login(login->login.loginPage("/login"))
                 .logout(logout -> logout
 //                        .logoutSuccessUrl("/")
                                 .deleteCookies("JSESSIONID")
@@ -100,5 +102,6 @@ public class CustomSecurityConfig {
                         );
 
     }
+
 
 }

@@ -54,7 +54,7 @@ public class BoardController {
     }
 
     @GetMapping("/register")
-    @PreAuthorize("hasRole('ROLE_USER')")
+    @PreAuthorize("isAuthenticated()") // 로그인된 사용자 모두 접근
     public String register() {
 
         return "board/register";
@@ -91,7 +91,11 @@ public class BoardController {
         return "board/read";
     }
 
-    @PreAuthorize("principal.username == #boardDTO.writer")
+    //    @PreAuthorize("permitAll()") // 모든 사용자
+//    @PreAuthorize("isAuthenticated()") // 로그인된 사용자 모두 접근
+//    @PreAuthorize("hasAuthority('ROLE_USER') and principal.username == #boardDTO.writer")
+//    @PreAuthorize("hasAnyAuthority('ROLE_USER','ROLE_ADMIN') and principal.username == #boardDTO.writer")
+    @PreAuthorize("hasAnyRole('USER','ADMIN') and principal.username == #boardDTO.writer")
     @PostMapping("/modify")
     public String modify(@Valid BoardDTO boardDTO,
                          PageRequestDTO pageRequestDTO,
@@ -132,7 +136,7 @@ public class BoardController {
         log.info(boardDTO.getFileNames());
 
         List<String> fileNames = boardDTO.getFileNames();
-        if(fileNames != null && fileNames.size() > 0) {
+        if (fileNames != null && fileNames.size() > 0) {
             removeFiles(fileNames);
         }
 
@@ -141,15 +145,15 @@ public class BoardController {
     }
 
     public void removeFiles(List<String> fileNames) {
-        for(String fileName : fileNames) {
-            Resource resource = new FileSystemResource(location + File.separator + fileName );
+        for (String fileName : fileNames) {
+            Resource resource = new FileSystemResource(location + File.separator + fileName);
 
             String resourceName = resource.getFilename();
-            try{
+            try {
                 String contentType = Files.probeContentType(resource.getFile().toPath());
                 resource.getFile().delete();
-                if(contentType.startsWith("image")) {
-                    File thumbnailFile = new File(location + File.separator + "s_" +fileName);
+                if (contentType.startsWith("image")) {
+                    File thumbnailFile = new File(location + File.separator + "s_" + fileName);
                     thumbnailFile.delete();
                 }
             } catch (IOException e) {
