@@ -1,6 +1,7 @@
 package kroryi.spring.service;
 
 import kroryi.spring.dto.MemberJoinDTO;
+import kroryi.spring.dto.MemberSecurityDTO;
 import org.springframework.stereotype.Service;
 
 public interface MemberService {
@@ -14,4 +15,6 @@ public interface MemberService {
     }
 
     void join(MemberJoinDTO dto) throws MidExitException, MpwExitException;
+
+    void updateMember(MemberSecurityDTO dto) throws MidExitException, MpwExitException;
 }

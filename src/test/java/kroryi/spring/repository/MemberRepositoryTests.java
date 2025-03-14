@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.test.annotation.Commit;
 
 import java.util.Optional;
 import java.util.stream.IntStream;
@@ -27,6 +28,8 @@ public class MemberRepositoryTests {
                     .mid("member" + i)
                     .mpw(passwordEncoder.encode("1111"))
                     .email("email" + i + "@email.com")
+                    .del(false)
+                    .social(false)
                     .build();
             if( i>= 35){
                 member.addRole(MemberRole.ADMIN);
@@ -49,6 +52,14 @@ public class MemberRepositoryTests {
         });
 
 
+    }
+
+    @Commit
+    @Test
+    public void testUpdate(){
+        String mid = "plus4957@naver.com";
+        String mpw = passwordEncoder.encode("1111");
+        memberRepository.updatePassword(mid, mpw);
     }
 
 

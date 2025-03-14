@@ -1,6 +1,7 @@
 package kroryi.spring.service;
 
 import kroryi.spring.dto.MemberJoinDTO;
+import kroryi.spring.dto.MemberSecurityDTO;
 import kroryi.spring.entity.Member;
 import kroryi.spring.entity.MemberRole;
 import kroryi.spring.repository.MemberRepository;
@@ -40,5 +41,10 @@ public class MemberServiceImpl implements MemberService {
         log.info(member.getRoleSet());
 
         memberRepository.save(member);
+    }
+
+    @Override
+    public void updateMember(MemberSecurityDTO dto)  throws MidExitException, MpwExitException{
+            memberRepository.updateMember(dto.getMid(), dto.getEmail(), dto.getMpw());
     }
 }

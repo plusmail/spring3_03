@@ -24,22 +24,17 @@ public class Member extends BaseEntity {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "del")
-    private Boolean del;
+    @Column(name = "del", nullable = false)
+    private boolean del;
 
-    @Column(name = "social")
-    private Boolean social;
+    @Column(name = "social", nullable = false)
+    private boolean social;
 
     @ElementCollection(fetch = FetchType.LAZY)
     @Builder.Default
     private Set<MemberRole> roleSet = new HashSet<>();
 
-    @PrePersist
-    public void prePersist() {
-        if(social == null) {
-            social = false;
-        }
-    }
+
 
     public void changePassword(String mpw){
         this.mpw = mpw;
@@ -49,11 +44,11 @@ public class Member extends BaseEntity {
         this.email = email;
     }
 
-    public void changeDel(Boolean del){
+    public void changeDel(boolean del){
         this.del = del;
     }
 
-    public void changeSocial(Boolean social){
+    public void changeSocial(boolean social){
         this.social = social;
     }
 

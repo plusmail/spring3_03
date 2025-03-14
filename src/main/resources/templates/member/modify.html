@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{layout/layout.html}"
+      lang="ko">
+
+<div layout:fragment="content">
+
+    <div>
+        <div>
+            <div>
+                <h1>회원 정보 수정</h1>
+            </div>
+        </div>
+        <div>
+            <form method="post">
+                <div>
+                    <span>아이디:</span>
+                    <input type="text" id="mid" name="mid" th:value="${member.mid}" readonly>
+                </div>
+                <div>
+                    <span>현재 비밀번호:</span>
+                    <input type="password" id="current_mpw" name="current_mpw">
+                </div>
+                <div>
+                    <span>새 비밀번호:</span>
+                    <input type="password" id="new_mpw" name="new_mpw">
+                </div>
+                <div>
+                    <span>새 비밀번호(재입력):</span>
+                    <input type="password" id="re_new_mpw" name="re_new_mpw">
+                </div>
+                <div>
+                    <span>EMAIL:</span>
+                    <input type="email" id="email" name="email" th:value="${member.email}">
+                </div>
+                <div>
+                    <div>
+                        <button type="button" class="submitBtn">수정</button>
+                        <button type="reset" class="">취소</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script layout:fragment="script" th:inline="javascript">
+    const error = [[${error}]]
+    if (error) {
+        if (error === 'password_mismatch') {
+            alert("현재 비밀번호가 일치하지 않습니다.")
+        } else if (error === 'email_duplicate') {
+            alert("이미 사용 중인 이메일입니다. 다른 이메일을 입력하세요.")
+        } else if (error === 'validation_failed') {
+            alert("입력값을 확인해주세요.")
+        }
+    }
+
+    document.querySelector(".submitBtn").addEventListener("click", async function(event){
+        event.preventDefault()
+
+        const formData = {
+            mid: document.getElementById("mid").value,
+            current_mpw: document.getElementById("current_mpw").value,
+            new_mpw: document.getElementById("new_mpw").value,
+            re_new_mpw: document.getElementById("re_new_mpw").value,
+            email: document.getElementById("email").value,
+
+        }
+
+        try{
+            const response = await fetch("/member/modify",{
+                method:"POST",
+                headers:{
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            })
+
+            const result = await  response.json();
+            if(response.ok){
+                alert("회원정부소정 성공!")
+                window.location.href = "/"
+            }else{
+                 alert(`오류가 발생 했습니다.: ${result.error}`)
+            }
+
+        }catch (error){
+            console.error("수정 중 오류 발생", error)
+            alert("서버에서 오류가 발생 했습니다.")
+        }
+    })
+
+
+</script>

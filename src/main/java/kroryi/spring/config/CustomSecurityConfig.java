@@ -1,5 +1,6 @@
 package kroryi.spring.config;
 
+import kroryi.spring.handler.CustomSocialLoginSuccessHandler;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
@@ -15,6 +16,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClientProvider;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClientProviderBuilder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 
@@ -81,7 +83,9 @@ public class CustomSecurityConfig {
                         .userDetailsService(userDetailsService)
                         .tokenValiditySeconds(60 * 60 * 24 * 30)
                 )
-                .oauth2Login(login->login.loginPage("/login"))
+                .oauth2Login(
+                        (login)->login.loginPage("/login")
+                                .successHandler(socialLoginSuccessHandler()))
                 .logout(logout -> logout
 //                        .logoutSuccessUrl("/")
                                 .deleteCookies("JSESSIONID")
@@ -100,8 +104,11 @@ public class CustomSecurityConfig {
                         .requestMatchers(
                                 PathRequest.toStaticResources().atCommonLocations()
                         );
-
     }
 
+    @Bean
+    public AuthenticationSuccessHandler socialLoginSuccessHandler() {
+        return new CustomSocialLoginSuccessHandler(passwordEncoder());
+    }
 
 }
