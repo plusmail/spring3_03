@@ -27,6 +27,10 @@ public class CustomServletConfig implements WebMvcConfigurer {
 
         registry.addResourceHandler("/favicon.ico")
                 .addResourceLocations("classpath:/static/");
+
+        registry.addResourceHandler("/**")
+                .addResourceLocations("classpath:/static/");
+
     }
 
 }

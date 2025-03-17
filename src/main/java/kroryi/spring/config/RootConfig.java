@@ -14,8 +14,9 @@ public class RootConfig {
         modelMapper.getConfiguration()
                 .setFieldMatchingEnabled(true)
                 .setFieldAccessLevel(org.modelmapper.config.Configuration.AccessLevel.PRIVATE)
-                .setMatchingStrategy(MatchingStrategies.STRICT);
-
+                .setMatchingStrategy(MatchingStrategies.LOOSE);
+        // STRICT 완전히 일치, STANDARD 대부분 일치,
+        // LOOSE (fileName, name 같을걸루 취급해서 오류 날 확률이 높다) 구조적으로 유사
         return modelMapper;
     }
 

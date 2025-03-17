@@ -1,0 +1,19 @@
+sample
+
+<script src="https://unpkg.com/axios/dist/axios.min.js">
+
+</script>
+
+<script>
+    console.log("111111111111111111")
+    async function callTest(){
+        const response = await axios.get("http://localhost:8080/api/sample/doA")
+        console.log(response)
+        return response.data  // payload
+    }
+
+    callTest()
+        .then(data => console.log(data))
+        .catch(e=> console.log(e))
+
+</script>
