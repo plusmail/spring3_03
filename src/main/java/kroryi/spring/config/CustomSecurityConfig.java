@@ -2,7 +2,10 @@ package kroryi.spring.config;
 
 import kroryi.spring.handler.APILoginSuccessHandler;
 import kroryi.spring.handler.CustomSocialLoginSuccessHandler;
+import kroryi.spring.security.JWTUtil;
 import kroryi.spring.security.filter.APILoginFilter;
+import kroryi.spring.security.filter.RefreshTokenFilter;
+import kroryi.spring.security.filter.TokenCheckFilter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
@@ -32,6 +35,7 @@ import javax.sql.DataSource;
 @EnableMethodSecurity(prePostEnabled = true)
 public class CustomSecurityConfig {
 
+    private final JWTUtil jwtUtil;
 //    private final APIUserDetailsService apiUserDetailsService;
 
     private final DataSource dataSource;
@@ -78,23 +82,29 @@ public class CustomSecurityConfig {
         APILoginFilter loginFilter = new APILoginFilter("/generateToken");
         loginFilter.setAuthenticationManager(manager);
 
-        APILoginSuccessHandler successHandler = new APILoginSuccessHandler();
+        APILoginSuccessHandler successHandler = new APILoginSuccessHandler(jwtUtil);
         loginFilter.setAuthenticationSuccessHandler(successHandler);
 
 
         http.addFilterBefore(loginFilter, UsernamePasswordAuthenticationFilter.class);
 
+        http.addFilterBefore(new TokenCheckFilter(jwtUtil), UsernamePasswordAuthenticationFilter.class);
+
+        http.addFilterBefore(new RefreshTokenFilter("/refreshToken",jwtUtil), TokenCheckFilter.class);
 
         http
                 .csrf(AbstractHttpConfigurer::disable)// 실무에서는 disable하면 안됨.
+                .cors(AbstractHttpConfigurer::disable)
                 .sessionManagement( sess->
                         sess.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/**").permitAll()
+//                        .requestMatchers("/**").permitAll()
                         .requestMatchers("/login").permitAll()
-                        .requestMatchers("/api/**").permitAll()
+//                        .requestMatchers("/api/**").permitAll()
+                        .requestMatchers("/api/public").permitAll()
+                        .requestMatchers("/api/secure").authenticated()
                         .requestMatchers(
-                                "/swagger-ui/index.html", "/api/api-docs/**", "/swagger-ui.html"
+                                "/swagger-ui/index.html","/swagger-ui/**", "/api/api-docs/**", "/swagger-ui.html"
                         ).permitAll()
                         .requestMatchers("/login/oauth2/code/kakao").permitAll()
                         .requestMatchers("/member/join").permitAll()

@@ -34,7 +34,7 @@ public class JWTUtilTests {
 //         {payloads={mid=abcdef, mpw=1111, email=aaa@a.co.kr}, iat=1742193097, exp=1742279497}
 //        payloads 도 맵 그 안쪽에 mid, mpw, email  ,iat  , exp
 
-        Map<String,Object> claim= jwtUtil.validateToken(jwtStr);
+        Claims claim= jwtUtil.validateToken(jwtStr);
 
         Map<String,Object> payloads = (Map<String, Object>) claim.get("payloads");
 
@@ -42,4 +42,5 @@ public class JWTUtilTests {
         log.info("test-----1 {}", payloads.get("mpw"));
         log.info("test-----1 {}", payloads.get("email"));
     }
+
 }

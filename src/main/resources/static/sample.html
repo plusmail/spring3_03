@@ -1,19 +1,84 @@
 sample
+<form>
 
-<script src="https://unpkg.com/axios/dist/axios.min.js">
+    <input type="text" id="name">
+    <input type="text" id="age">
+    <input type="text" id="email">
+    <button type="button" class="btn1Get">버튼Get</button>
+    <button type="button" class="btn1Post">버튼Post</button>
 
-</script>
+</form>
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-    console.log("111111111111111111")
-    async function callTest(){
-        const response = await axios.get("http://localhost:8080/api/sample/doA")
-        console.log(response)
-        return response.data  // payload
+
+    const callServer = async () => {
+        const name = document.getElementById("name").value;
+        const age = document.getElementById("age").value;
+        const email = document.getElementById("email").value;
+
+        console.log("API 서버 호출 1")
+        const accessToken = localStorage.getItem("accessToken")
+        if (!accessToken) {
+            throw "토큰이 없습니다."
+        }
+
+        // 서버로 전송 하기전에 http 프로토콜에 정보를 등록
+        console.log(accessToken)
+        const res = await axios.post('http://localhost:8080/api/secure', {
+            name: name,
+            age: age,
+            email: email
+        }, {
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${accessToken}`
+            }
+        })
+        console.log(res)
+        return res.data
+
     }
 
-    callTest()
-        .then(data => console.log(data))
-        .catch(e=> console.log(e))
+    const callServerGet = async () => {
+        console.log("API 서버 호출 1")
+        const name = document.getElementById("name").value;
+        const age = document.getElementById("age").value;
+        const email = document.getElementById("email").value;
+
+        console.log("----- " +name)
+        const accessToken = localStorage.getItem("accessToken")
+        if (!accessToken) {
+            throw "토큰이 없습니다."
+        }
+
+        // 서버로 전송 하기전에 http 프로토콜에 정보를 등록
+        console.log(accessToken)
+        const res = await axios.get('http://localhost:8080/api/secure', {
+            params: {
+                name: name,
+                age: age,
+                email: email
+            },
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${accessToken}`
+            }
+        })
+        console.log(res)
+        return res.data
+
+    }
+
+    document.querySelector(".btn1Get").addEventListener("click", e => {
+        callServerGet()
+    })
+
+    document.querySelector(".btn1Post").addEventListener("click", e => {
+        callServer()
+    })
+
 
 </script>

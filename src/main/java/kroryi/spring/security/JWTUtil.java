@@ -43,13 +43,12 @@ public class JWTUtil {
                 .compact();
     }
 
-    public Map<String, Object> validateToken(String token) {
+    public Claims validateToken(String token) {
         this.signingKey = Keys.hmacShaKeyFor(Base64.getDecoder().decode(key));
 
         try {
-             Claims claims = (Claims) Jwts.parser().verifyWith(this.signingKey)
-                     .build().parseSignedClaims(token).getPayload();
-            return claims;
+            return Jwts.parser().verifyWith(this.signingKey)
+                    .build().parseSignedClaims(token).getPayload();
         } catch (io.jsonwebtoken.security.SecurityException | MalformedJwtException e) {
             log.error("Invalid jwt signature.", e);
             throw e;
