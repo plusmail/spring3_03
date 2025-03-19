@@ -39,11 +39,8 @@ public class SampleAPIController {
         log.info("나이Get : {}", age);
         log.info("메일Get : {}", email);
         log.info("토큰Get : {}", authorizationHeader);
-
-
         return "이 메소드는 보안용 Get API";
     }
-
 
     @SecurityRequirement(name = "BearerAuth")
     @PostMapping("/secure")
